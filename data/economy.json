@@ -1,0 +1,99 @@
+{
+ "updated": "21 Nov 2026",
+ "ticker": [
+  [
+   "RBA cash rate",
+   "4.85%"
+  ],
+  [
+   "CPI inflation",
+   "4.3%"
+  ],
+  [
+   "Unemployment",
+   "4.9%"
+  ],
+  [
+   "Wage growth",
+   "3.5%"
+  ],
+  [
+   "US Fed funds",
+   "3.75–4%"
+  ]
+ ],
+ "cards": [
+  {
+   "label": "RBA cash rate",
+   "value": "4.85%",
+   "note": "Raised 25 bp on 3 Nov, a 6–3 vote. Highest since Nov 2008; fifth rise of 2026."
+  },
+  {
+   "label": "CPI inflation",
+   "value": "4.3%",
+   "note": "12 months to Sep 2026 (ABS, 28 Oct). Trimmed mean 3.6%. Housing rose 5.2%."
+  },
+  {
+   "label": "Unemployment",
+   "value": "4.9%",
+   "note": "Oct 2026 (ABS, 19 Nov), highest since Oct 2021. Youth rate 11.3%; underemployment 6.2%."
+  },
+  {
+   "label": "Wage Price Index",
+   "value": "3.5%",
+   "note": "Year to Sep qtr (ABS, 18 Nov). Up 1.1% in the quarter, the strongest since Dec 2023."
+  },
+  {
+   "label": "GDP growth",
+   "value": "2.1%",
+   "note": "Year to Jun qtr 2026 (ABS, 2 Sep), after +0.4% in the quarter. Next release 2 Dec."
+  },
+  {
+   "label": "RBA inflation forecast",
+   "value": "4.5%",
+   "note": "CPI expected by Dec 2026, easing to 2.5% by Jun 2028 (RBA, Nov SMP)."
+  },
+  {
+   "label": "US federal funds rate",
+   "value": "3.75–4%",
+   "note": "Held on 28 Oct in a 10–2 vote; two members wanted a rise. Raised in September."
+  },
+  {
+   "label": "US CPI inflation",
+   "value": "3.7%",
+   "note": "12 months to Sep 2026; core 2.6%. October rose 0.4% on the month (BLS, 10 Nov)."
+  },
+  {
+   "label": "US unemployment",
+   "value": "4.1%",
+   "note": "Oct 2026, with payrolls up 165,000 (BLS, preliminary)."
+  }
+ ],
+ "calendar": [
+  [
+   "25 Nov 2026",
+   "ABS",
+   "Monthly CPI, October"
+  ],
+  [
+   "2 Dec 2026",
+   "ABS",
+   "National Accounts, September quarter"
+  ],
+  [
+   "8 Dec 2026",
+   "RBA",
+   "Cash rate decision, 2:30pm AEDT"
+  ],
+  [
+   "10 Dec 2026",
+   "BLS",
+   "US CPI, November"
+  ],
+  [
+   "17 Dec 2026",
+   "ABS",
+   "Labour Force, November"
+  ]
+ ]
+}
