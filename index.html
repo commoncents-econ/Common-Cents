@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Common Cents: Economics Explained Clearly</title>
-<meta name="description" content="Common Cents: interactive economics lessons, a guide to writing top exam answers, an economics dictionary, and sourced RBA cash rate history.">
+<meta name="description" content="Common Cents: because financial literacy should be common sense. Interactive economics lessons, a guide to writing top exam answers, an economics dictionary, and sourced RBA cash rate history.">
+<meta property="og:title" content="Common Cents: Economics Explained Clearly"><meta property="og:description" content="Because financial literacy should be common sense. Lessons, live RBA and ABS data, and plain-English explainers."><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
 <style>
 :root{--bg:#fff;--sf:#f5f4f2;--tx:#111;--mu:#5d5d63;--ac:#2b62b3;--ai:#fff;--ln:#dcdbd8;--ok:#1f7a45;--bad:#2b62b3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f0f10;--sf:#1a1a1c;--tx:#f2f2f2;--mu:#a3a3ab;--ac:#ff5468;--ai:#190205;--ln:#303034;--ok:#5fd08a;--bad:#ff8a80}}
@@ -317,14 +318,35 @@ footer b{color:#fff;font-size:22px;font-weight:800}footer .by{font-weight:700;co
 .chapter-endnote{font:12px/1.6 Manrope,Inter,sans-serif;color:var(--mu)}
 .chapter-group[hidden],.full-lesson[hidden]{display:none!important}
 @media(max-width:690px){.chapter-grid{grid-template-columns:minmax(0,1fr)}.full-lesson[open]{grid-column:1}.directory-lead{padding:20px;gap:10px}.directory-count{font-size:32px}.chapter-mark{width:38px;height:38px;font-size:14px}.chapter-content{padding:22px 18px 26px}}
+
+/* v3: dashboard + financial literacy */
+.pq{font:700 clamp(20px,3vw,26px)/1.4 Manrope,Inter,sans-serif;border-left:5px solid var(--ac);padding:4px 0 4px 20px;margin:22px 0;max-width:62ch}
+.ess{max-width:68ch}.ess p{font:17px/1.85 Manrope,Inter,sans-serif;margin:0 0 16px}.ess p:first-child::first-letter{font-weight:800;font-size:3.2em;float:left;line-height:.9;padding:6px 10px 0 0;color:var(--ac)}
+.fl3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}@media(max-width:860px){.fl3{grid-template-columns:1fr}}
+.fx{background:var(--sf);border-radius:14px;padding:22px;border-top:4px solid var(--ac);animation:fi .4s}.fx:nth-child(2){background:var(--nv);color:#fff}.fx b{display:block;font:800 11px Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:8px}.fx:nth-child(2) b{color:#8cbaff}.fx p{margin:0;font:15px/1.7 Manrope,Inter,sans-serif}
+.stc small{display:block;font:700 11px Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-bottom:6px}.stc .num{font-size:clamp(34px,4.4vw,44px)}
+.fcard{cursor:default}.fcard:hover{transform:none;box-shadow:none}
+@media(max-width:640px){nav{grid-template-columns:repeat(7,minmax(0,1fr))!important}}
+
+/* v4: landing hero, theme toggle */
+.hero{margin:28px 0 8px;padding:clamp(34px,6vw,72px) clamp(22px,5vw,64px);border-radius:20px;color:#fff;background:radial-gradient(900px 400px at 85% -10%,rgba(122,174,240,.28),transparent 60%),linear-gradient(135deg,var(--nv),#17407a);border-bottom:6px solid var(--ac)}
+.hero .tag{color:#9cc4f5}.hero h1{font:800 clamp(38px,6.4vw,74px)/1.04 Manrope,Inter,sans-serif!important;letter-spacing:-.035em;margin:0 0 18px;max-width:17ch;color:#fff}
+.hero h1 em{font-style:normal;color:#9cc4f5;background:linear-gradient(#9cc4f5,#9cc4f5) 0 94%/100% 4px no-repeat}
+.hs{font:500 clamp(16px,2vw,20px)/1.6 Manrope,Inter,sans-serif;color:#d3dcea;max-width:52ch;margin:0 0 26px}
+.hb{display:flex;gap:12px;flex-wrap:wrap}.hb .btn{background:#fff;color:var(--nv);border-radius:8px}.hb .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.tk{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;margin-top:38px;background:rgba(255,255,255,.18);border-radius:12px;overflow:hidden}
+.tk div{background:rgba(6,15,31,.55);padding:14px 16px}.tk small{display:block;font:700 10px Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9cc4f5}.tk b{font:800 24px Manrope,sans-serif;letter-spacing:-.02em}
+.tk-note{font:12px Manrope,sans-serif;color:#b7c6dc;margin:10px 0 0}.tk-note a{color:#cfe1fa}
+.tgl{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:var(--bg);color:var(--tx);font-size:20px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.18)}
 </style>
 </head>
 <body>
 <div id="pg"></div>
 <div class="bar"><div class="w">Economics, explained clearly</div></div>
-<header><div class="w"><nav><div class="logo"><i>¢</i>Common Cents</div><a href="#home">Home</a><a href="#library">Learn (53)</a><a href="#practice">Practice</a><a href="#money">Money</a><a href="#data">Data</a><a href="#news">News</a></nav></div></header>
+<header><div class="w"><nav><div class="logo"><i>¢</i>Common Cents</div><a href="#home">Home</a><a href="#library">Learn (53)</a><a href="#practice">Practice</a><a href="#literacy">Literacy</a><a href="#money">Money</a><a href="#data">Data</a><a href="#news">News</a></nav></div></header>
 
-<div class="w"><div class="main">
+<div class="w"><div class="hero rv"><p class="tag">Economics and financial literacy, Australia</p><h1>Because financial literacy should be <em>common sense.</em></h1><p class="hs">Plain-English lessons, live RBA and ABS data, and the skills to make sense of your money. Free, and built for everyone.</p><div class="hb"><a class="btn" href="#literacy">Read the story of 2026</a><a class="btn ghost" href="#library">Browse 53 lessons</a><a class="btn ghost" href="#dash">See the data</a></div><div class="tk" id="tk"></div><p class="tk-note" id="tkn"></p></div>
+<div class="main">
 <div class="feat rv"><p class="tag">Featured lesson</p><h1>Why your money buys less every year</h1><p>Inflation quietly changes what every dollar is worth. Here’s how it works, who it hits, and what the RBA does about it.</p><button class="btn" id="go">Read the lesson →</button></div>
 <aside class="side rv"><h3>Trending terms</h3><a data-t="Cash rate">Cash rate</a><a data-t="Inflation">Inflation</a><a data-t="Opportunity cost">Opportunity cost</a><a data-t="Compound interest">Compound interest</a><a data-t="Recession">Recession</a></aside>
 </div></div>
@@ -335,6 +357,7 @@ footer b{color:#fff;font-size:22px;font-weight:800}footer .by{font-weight:700;co
 <a class="card" href="#library"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d='M3 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z'/></svg></span><h3>Learn</h3><p>Explore complete lessons in economics, personal finance, investing, policy and exam skills.</p></a>
 <a class="card" href="#practice"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d='M4 20l4-1L19 8l-3-3L5 16zM14 7l3 3'/></svg></span><h3>Practice</h3><p>Draw economic models, answer senior-style questions and test your writing.</p></a>
 <a class="card" href="#money"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx='12' cy='12' r='8'/><path d='M12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.5 2.5 1.5-1 1.5-2.5 1.5-2.5.5-2.5 1.5 1 1.5 2.5 1.5 2.5-.5 2.5-1.5'/></svg></span><h3>Money skills</h3><p>Budgeting, super, debt, investing, and what the data says about gender and pay.</p></a>
+<a class="card" href="#literacy"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5zM7 11v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5"/></svg></span><h3>Literacy</h3><p>The 2026 money story, explained.</p></a>
 <a class="card" href="#data"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d='M4 20V4M4 20h16M8 16l4-5 3 3 5-7'/></svg></span><h3>Data</h3><p>Charts and sourced RBA cash rate history, explained in plain English.</p></a>
 <a class="card" href="#news"><span class="ic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d='M5 4h12v16H6a1 1 0 0 1-1-1zM17 8h3v11a1 1 0 0 1-1 1M8 8h6M8 12h6M8 16h4'/></svg></span><h3>News &amp; politics</h3><p>Headlines from trusted sources and how to read the news critically.</p></a></div>
 <div class="dyk"><b>Did you know?</b><p id="dyk"></p></div>
@@ -1296,6 +1319,22 @@ footer b{color:#fff;font-size:22px;font-weight:800}footer .by{font-weight:700;co
 <section id="news" class="rv"><h2>Understanding the news and politics</h2><p class="sub">How to read claims, check sources and follow public debate, whatever your views. These skills apply to every side of every issue.</p>
 <div class="tabs" id="nt"></div><div class="mp" id="nm"></div>
 <h3 class="sec">Fact, opinion or prediction?</h3><p class="sub">Classify each statement. Facts can be checked, opinions are judgements, and predictions can’t be checked yet.</p><div id="fo"></div></section>
+<section id="finlit" class="rv"><p class="tag">Financial literacy</p><h2>The money story of 2026, explained</h2>
+<p class="sub">What is happening in the economy, what it means for ordinary households, and the skills that let you respond with confidence.</p>
+<p class="pq">Inflation, interest and risk are not abstract. They are the terms on which ordinary life is financed.</p>
+<h3 class="sec">Six forces shaping household finances</h3><p class="sub">Choose a theme. Each has the facts, the consequence and the underlying skill.</p>
+<div class="tabs" id="flt"></div><div class="fl3" id="flb"></div>
+<h3 class="sec">Why financial literacy matters</h3>
+<div class="ess"><p>Financial literacy is not a hobby for people who enjoy money. It is the working knowledge that lets you read a loan contract, compare two offers and tell a sound plan from a sales pitch. In a year when the cash rate has moved 125 basis points, understanding the difference between a variable and a fixed rate can be worth hundreds of dollars a month.</p>
+<p>It matters for the economy too. Monetary policy works through households: a rate decision changes spending only if people notice and respond to borrowing costs, saving returns and inflation. Citizens who can reason about money are better placed to separate signal from noise in booms and busts.</p>
+<p>And it is a civic skill. Budgets, tax settings, superannuation, housing and energy policy all rest on numbers. Literacy lets you read a claim, ask what it is measured against, and form your own view, whichever side you land on.</p></div>
+<h3 class="sec">Two calculations everyone should be able to do</h3>
+<p class="sub"><b>1. What a rate rise does to a mortgage.</b> The RBA’s five 2026 increases total 1.25 percentage points. Try a before and after rate.</p>
+<div class="calc"><div><label>Loan size <b id="m1v"></b></label><input type="range" id="m1" min="200000" max="1500000" step="10000" value="600000" aria-label="Loan size"><label>Loan term <b id="m2v"></b></label><input type="range" id="m2" min="10" max="30" step="1" value="30" aria-label="Loan term"><label>Rate before <b id="m3v"></b></label><input type="range" id="m3" min="3" max="10" step="0.05" value="6" aria-label="Rate before"><label>Rate after <b id="m4v"></b></label><input type="range" id="m4" min="3" max="10" step="0.05" value="7.25" aria-label="Rate after"></div><div><p class="u" style="margin:0;color:var(--mu);font:600 14px Manrope,Inter,sans-serif">Extra repayment each month</p><div class="res" id="mo3"></div><p class="note" id="mo4"></p></div></div>
+<p class="sub" style="margin-top:26px"><b>2. What compounding does over time.</b> Small regular amounts, left alone, do most of the work.</p>
+<div class="calc"><div><label>Starting amount <b id="k1v"></b></label><input type="range" id="k1" min="0" max="50000" step="500" value="5000" aria-label="Starting amount"><label>Added each month <b id="k2v"></b></label><input type="range" id="k2" min="0" max="2000" step="25" value="300" aria-label="Added each month"><label>Annual return <b id="k3v"></b></label><input type="range" id="k3" min="0" max="12" step="0.25" value="6" aria-label="Annual return"><label>Years <b id="k4v"></b></label><input type="range" id="k4" min="1" max="40" step="1" value="30" aria-label="Years"></div><div><p class="u" style="margin:0;color:var(--mu);font:600 14px Manrope,Inter,sans-serif">Balance at the end</p><div class="res" id="cout"></div><div class="cmp"><i id="cbar"></i></div><p class="note" id="cnote"></p></div></div>
+<p class="dis">Illustrative only: principal-and-interest loans, constant rates, no fees, tax or inflation. Lenders decide whether to pass on rate changes. General education, not financial advice. See <a href="https://moneysmart.gov.au" target="_blank" rel="noopener">ASIC Moneysmart</a>.</p>
+<h3 class="sec">Six ideas that never go out of date</h3><div class="cards" id="flp"></div></section>
 <section id="money" class="rv"><h2>Money skills for life</h2><p class="sub">Practical basics for everyone. Pick a topic.</p><div class="tabs" id="mtabs"></div><div class="mp" id="mp"></div>
 <h3 class="sec">Try a budget split</h3><p class="sub">The 50/30/20 rule is a common starting point: needs, wants, savings. It is a guide, not a rule for everyone.</p>
 <div class="bud"><div><label class="u" for="inc" style="font-weight:700;font-size:14px">Your monthly after-tax income ($)</label><input type="number" id="inc" value="4000" min="0" step="100"></div><div><div class="bs"><i style="background:#0f3a66;width:50%"></i><i style="background:#1769c2;width:30%"></i><i style="background:#1f9a55;width:20%"></i></div><div class="bl"><div>Needs 50%<b id="bn">$2,000</b></div><div>Wants 30%<b id="bw">$1,200</b></div><div>Savings 20%<b id="bsv">$800</b></div></div></div></div></section>
@@ -1316,16 +1355,34 @@ footer b{color:#fff;font-size:22px;font-weight:800}footer .by{font-weight:700;co
 <section id="dictionary" class="rv"><h2>Economics dictionary</h2><p class="sub">Plain-English definitions, A to Z.</p>
 <input type="search" id="gs" placeholder="Search the dictionary" aria-label="Search the dictionary"><dl class="az" id="gl"></dl></section>
 
+<section id="dash" class="rv"><p class="tag">Data dashboard · updated 21 Nov 2026</p><h2>Australia and the world in numbers</h2>
+<p class="sub">The latest releases from the RBA, the ABS, the US Federal Reserve and the US Bureau of Labor Statistics, each with its date and source.</p>
+<div class="st">
+<div class="stc"><small>RBA cash rate</small><div class="num">4.85%</div><p>Raised 25 bp on 3 Nov, a 6–3 vote. Highest since Nov 2008; fifth rise of 2026.</p></div>
+<div class="stc"><small>CPI inflation</small><div class="num">4.3%</div><p>12 months to Sep 2026 (ABS, 28 Oct). Trimmed mean 3.6%. Housing rose 5.2%.</p></div>
+<div class="stc"><small>Unemployment</small><div class="num">4.9%</div><p>Oct 2026 (ABS, 19 Nov), highest since Oct 2021. Youth rate 11.3%; underemployment 6.2%.</p></div>
+<div class="stc"><small>Wage Price Index</small><div class="num">3.5%</div><p>Year to Sep qtr (ABS, 18 Nov). Up 1.1% in the quarter, the strongest since Dec 2023.</p></div>
+<div class="stc"><small>GDP growth</small><div class="num">2.1%</div><p>Year to Jun qtr 2026 (ABS, 2 Sep), after +0.4% in the quarter. Next release 2 Dec.</p></div>
+<div class="stc"><small>RBA inflation forecast</small><div class="num">4.5%</div><p>CPI expected by Dec 2026, easing to 2.5% by Jun 2028 (RBA, Nov SMP).</p></div>
+<div class="stc"><small>US federal funds rate</small><div class="num">3.75–4%</div><p>Held on 28 Oct in a 10–2 vote; two members wanted a rise. Raised in September.</p></div>
+<div class="stc"><small>US CPI inflation</small><div class="num">3.7%</div><p>12 months to Sep 2026; core 2.6%. October rose 0.4% on the month (BLS, 10 Nov).</p></div>
+<div class="stc"><small>US unemployment</small><div class="num">4.1%</div><p>Oct 2026, with payrolls up 165,000 (BLS, preliminary).</p></div></div>
+<h3 class="sec">Coming up</h3>
+<table class="tbl"><thead><tr><th>Date</th><th>Source</th><th>Release</th></tr></thead><tbody>
+<tr><td>25 Nov 2026</td><td>ABS</td><td>Monthly CPI, October</td></tr><tr><td>2 Dec 2026</td><td>ABS</td><td>National Accounts, September quarter</td></tr>
+<tr><td>8 Dec 2026</td><td>RBA</td><td>Cash rate decision, 2:30pm AEDT</td></tr><tr><td>10 Dec 2026</td><td>BLS</td><td>US CPI, November</td></tr>
+<tr><td>17 Dec 2026</td><td>ABS</td><td>Labour Force, November</td></tr></tbody></table>
+<p class="note">Sources: <a href="https://www.rba.gov.au/publications/smp/2026/nov/overview.html" target="_blank" rel="noopener">RBA Statement on Monetary Policy, Nov 2026</a> · <a href="https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026" target="_blank" rel="noopener">ABS CPI</a> · <a href="https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-rises-49" target="_blank" rel="noopener">ABS Labour Force</a> · <a href="https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/sep-2026" target="_blank" rel="noopener">ABS Wage Price Index</a> · <a href="https://www.abs.gov.au/media-centre/media-releases/australian-economy-grew-04-june-quarter" target="_blank" rel="noopener">ABS National Accounts</a> · <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">Federal Reserve</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a>. The RBA’s November forecasts were finalised on 28 October. Release dates can change; check the publisher.</p></section>
 <section id="charts" class="rv"><h2>Charts</h2><p class="sub">Key numbers, drawn clearly. Each chart names its source.</p><div class="chs" id="chs"></div></section>
 <section id="data" class="rv"><h2>The RBA cash rate</h2>
 <p class="sub">The interest rate target set by the Reserve Bank of Australia. It influences loan rates, savings rates, and inflation. The chart below always displays a clearly dated historical snapshot, even if the optional data feed is unavailable.</p>
 <div class="box"><div id="chart"></div><div class="note" id="dnote"></div>
 <table class="tbl"><thead><tr><th>Effective</th><th>Change</th><th>Cash rate</th></tr></thead><tbody>
-<tr><td>4 Nov 2026</td><td>+0.25</td><td>4.85%</td></tr><tr><td>30 Sep 2026</td><td>+0.25</td><td>4.60%</td></tr><tr><td>12 Aug 2026</td><td>0.00</td><td>4.35%</td></tr><tr><td>17 Jun 2026</td><td>0.00</td><td>4.35%</td></tr></tbody></table>
+<tr><td>4 Nov 2026</td><td>+0.25</td><td>4.85%</td></tr><tr><td>30 Sep 2026</td><td>+0.25</td><td>4.60%</td></tr><tr><td>12 Aug 2026</td><td>0.00</td><td>4.35%</td></tr><tr><td>17 Jun 2026</td><td>0.00</td><td>4.35%</td></tr><tr><td>6 May 2026</td><td>+0.25</td><td>4.35%</td></tr><tr><td>18 Mar 2026</td><td>+0.25</td><td>4.10%</td></tr><tr><td>4 Feb 2026</td><td>+0.25</td><td>3.85%</td></tr></tbody></table>
 <p class="note">Recent decisions as listed on <a href="https://www.rba.gov.au/statistics/cash-rate/">rba.gov.au/statistics/cash-rate</a> when this page was built. Check the RBA for the latest.</p></div></section>
 </div>
 <div id="lm" role="dialog" aria-modal="true" aria-label="Lesson"><div class="lb2" id="lb2"></div></div>
-<footer><div class="w"><div><b>Common Cents</b><small>General education only, not financial advice. Data sources: Reserve Bank of Australia, Workplace Gender Equality Agency and ABS.</small></div><div class="by">Created by Madeleine Chun<small>© 2026 Common Cents</small></div></div></footer>
+<footer><div class="w"><div><b>Common Cents</b><small style="opacity:1;font-weight:700;margin-bottom:6px">Because financial literacy should be common sense.</small><small>General education only, not financial advice. Data sources: Reserve Bank of Australia, ABS, Workplace Gender Equality Agency, US Federal Reserve and US Bureau of Labor Statistics.</small></div><div class="by">Created by Madeleine Chun<small>© 2026 Common Cents</small></div></div></footer>
 
 <script>
 (function(){
@@ -1403,7 +1460,7 @@ Object.keys(m).forEach(function(k){$(k).classList.toggle('ok',m[k].test(l))});$(
 ta.addEventListener('input',function(){study.freewrite=ta.value;saveStudy();chk()});chk();
 
 var G=[['Cash rate','The interest rate on overnight loans between banks. The RBA sets a target for it.'],['Inflation','The general rise in prices over time, reducing what each dollar can buy.'],['CPI','Consumer Price Index: a measure of price changes for a typical basket of household goods.'],['Interest rate','The cost of borrowing money, or the return on saving it, as a yearly percentage.'],['Opportunity cost','The value of the next best option you give up when you choose.'],['Scarcity','Limited resources versus unlimited wants, which forces choices.'],['Supply','How much of something is available at a given price.'],['Demand','How much of something people want at a given price.'],['GDP','The total value of goods and services a country produces in a period.'],['Recession','A significant, widespread fall in economic activity.'],['Unemployment rate','The share of people in the labour force who want work but don’t have a job.'],['Compound interest','Interest earned on both your original money and past interest.'],['Monetary policy','Central bank actions, mainly interest rates, to influence spending and inflation.'],['Fiscal policy','Government spending and tax decisions that influence the economy.'],['Exchange rate','The price of one currency in terms of another, like AUD to USD.'],['Real vs nominal','Nominal values ignore inflation. Real values adjust for it.']].sort(function(a,b){return a[0]<b[0]?-1:1});
-var gl=$('gl');function rg(f){gl.innerHTML='';var n=0;G.forEach(function(g){if((g[0]+' '+g[1]).toLowerCase().indexOf(f)<0)return;n++;gl.appendChild(el('dt','',g[0]));gl.appendChild(el('dd','',g[1]))});if(!n)gl.textContent='No matches.'}
+G.push(["Trimmed mean","An underlying inflation measure that drops the biggest price rises and falls, so one-off swings matter less. The RBA watches it closely."],["Wage Price Index","An ABS measure of how much employers pay for the same jobs over time, unaffected by changes in hours or staff mix."],["Real wages","Pay adjusted for inflation. They rise only if wages grow faster than prices."],["Basis point","One hundredth of a percentage point. A 25 bp rise lifts a rate by 0.25 points."],["Neutral rate","The interest rate that neither speeds up nor slows the economy. It cannot be observed directly, only estimated."],["Bond yield","The annual return an investor gets from holding a bond. Yields rise when bond prices fall."],["Term premium","Extra yield investors demand for lending long term rather than rolling over short-term loans."],["Federal funds rate","The US central bank’s target for overnight bank lending, set by the Federal Open Market Committee."],["Underemployment","People who have a job but want, and are available for, more hours."],["Terms of trade","The price of a country’s exports relative to its imports."],["Real interest rate","The interest rate after subtracting inflation. It shows the true reward for saving or cost of borrowing."],["Monetary Policy Board","The nine-member RBA board that sets the cash rate target."],["Financial literacy","The knowledge, skills and confidence to make sound decisions about earning, spending, saving, borrowing and investing."]);G.sort(function(a,b){return a[0].localeCompare(b[0])});var gl=$('gl');function rg(f){gl.innerHTML='';var n=0;G.forEach(function(g){if((g[0]+' '+g[1]).toLowerCase().indexOf(f)<0)return;n++;gl.appendChild(el('dt','',g[0]));gl.appendChild(el('dd','',g[1]))});if(!n)gl.textContent='No matches.'}
 rg('');$('gs').addEventListener('input',function(e){rg(e.target.value.toLowerCase().trim())});
 Array.prototype.forEach.call(document.querySelectorAll('.side a'),function(a){a.onclick=function(){$('gs').value=a.dataset.t;rg(a.dataset.t.toLowerCase());location.hash='dictionary'}});
 
@@ -1621,12 +1678,15 @@ $('nnote').textContent='A live feed is not connected in this file. Follow these 
 var fallbackNews=[
 {source:'RBA',title:'Monetary policy decisions and media releases',link:'https://www.rba.gov.au/media-releases/'},
 {source:'ABS',title:'Australia’s latest economic statistics',link:'https://www.abs.gov.au/statistics/economy'},
-{source:'Australian Treasury',title:'Economic policy, budget papers and publications',link:'https://treasury.gov.au/publications'}];
+{source:'Australian Treasury',title:'Economic policy, budget papers and publications',link:'https://treasury.gov.au/publications'},
+{source:'RBA',title:'Statement on Monetary Policy, November 2026',link:'https://www.rba.gov.au/publications/smp/2026/nov/overview.html'},
+{source:'ABS',title:'Labour Force, Australia, October 2026',link:'https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/oct-2026'},
+{source:'US Federal Reserve',title:'FOMC statement, 28 October 2026',link:'https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm'}];
 fallbackNews.forEach(function(x){var a=el('a','nw');a.href=x.link;a.target='_blank';a.rel='noopener';a.appendChild(el('span','',x.source));a.appendChild(el('b','',x.title));a.appendChild(el('em','','Official source · Latest updates on their website'));$('nws').appendChild(a);$('hnews').appendChild(a.cloneNode(true))});
 });
 document.querySelector('.bar .w').textContent=new Date().toLocaleDateString('en-AU',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+'  ·  Economics, explained clearly';
 /* routing */
-var VM={home:[],learn:['about','library','learn','calc','dictionary'],practice:['models','qcaa','write'],money:['money','women'],data:['charts','data'],news:['headlines','means','news']},ALL=['about','library','learn','calc','dictionary','models','qcaa','write','money','women','charts','data','headlines','means','news'],hero=document.querySelector('.main').parentNode,strip=document.querySelector('.strip');
+var VM={home:[],learn:['about','library','learn','calc','dictionary'],practice:['models','qcaa','write'],money:['money','women'],data:['dash','charts','data'],literacy:['finlit'],news:['headlines','means','news']},ALL=['about','library','learn','calc','dictionary','models','qcaa','write','money','women','finlit','dash','charts','data','headlines','means','news'],hero=document.querySelector('.main').parentNode,strip=document.querySelector('.strip');
 function route(){var hs=location.hash.slice(1),v=VM[hs]?hs:null;if(!v){for(var k in VM)if(VM[k].indexOf(hs)>=0)v=k}v=v||'home';var hm=v==='home';hero.style.display=strip.style.display=$('home').style.display=hm?'':'none';ALL.forEach(function(id){$(id).style.display=VM[v].indexOf(id)>=0?'':'none'});Array.prototype.forEach.call(document.querySelectorAll('nav a'),function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+v)});if(hs&&hs!==v&&$(hs))setTimeout(function(){$(hs).scrollIntoView()},50);else scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 if($('hr'))$('hr').textContent='4.85%';
@@ -1651,6 +1711,44 @@ if(P.length<2||P[P.length-1].d<rateFallback.updated)return;
 rateChart(P,j.updated||'',false);
 var last=P[P.length-1];$('hr').textContent=last.v.toFixed(2)+'%';$('hd').textContent='Effective '+last.d+' · RBA data file';
 }).catch(function(){/* Offline snapshot is already visible; no empty chart. */});
+
+/* v3 additions: literacy + dashboard charts */
+var FL=[["The rate shock","The RBA has lifted the cash rate five times in 2026, from 3.60% to 4.85%, the highest since November 2008. The 3 November decision was split 6–3, showing the Board itself is debating how much tightening is enough.","Variable-rate borrowers feel changes first, if their lender passes them on. Savers can gain, but only if banks lift deposit rates too, which is not guaranteed.","Transmission: how a policy rate reaches your budget through loans, deposits and spending."],
+["Prices versus pay","ABS data show CPI up 4.3% in the year to September, with underlying (trimmed mean) inflation at 3.6%. The Wage Price Index rose 3.5% over the year, its strongest quarter since late 2023, but still below headline inflation.","When prices outpace pay, real income falls even if your salary rises. That is why comparing prices, tracking spending and negotiating with evidence matter more in this phase.","Real versus nominal: ask what a dollar will buy, not only how many you have."],
+["The energy shock","The RBA says the Middle East conflict has lifted global energy prices and fuel costs, and it has revised its inflation forecast materially higher. It expects inflation to stay above 3% until the end of 2027.","Fuel flows through to freight, food and services. Households with long commutes or tight budgets absorb a larger share, and interest rates can only temper demand, not lower oil prices.","Headline versus underlying inflation: the ABS left fuel out of the trimmed mean in September for this reason."],
+["A cooling jobs market","Unemployment rose to 4.9% in October, the highest since October 2021, with about 44,000 fewer people employed in the month. Youth unemployment is 11.3%. The RBA projects a rate a bit over 5% by the end of 2028.","Rate rises work partly by cooling the labour market, so a good outcome for inflation can feel bad for individual workers. Job security becomes a financial risk to plan for.","Buffers and income resilience: how many months of essentials could you cover?"],
+["Housing under pressure","The RBA says housing prices in September were almost 5% below their March peak and new housing lending has fallen sharply, reflecting higher interest rates and tax changes announced in the federal budget.","A mortgage is leverage: a fixed debt against a changing asset price. Falling prices and higher repayments together squeeze people who borrowed close to their limit.","Serviceability: test any loan at a rate well above today’s before you sign."],
+["The global squeeze","The US Federal Reserve raised its target range to 3.75–4.00% in September and held in October, with two members preferring another rise. US CPI was 3.7% in the year to September. The RBA notes advanced-economy bond yields are at multi-year highs.","Global yields influence Australian fixed rates, the dollar and investment returns. Shocks abroad can arrive through energy prices, exchange rates and markets.","Bond yields and term premia: the price of waiting, and why long rates can move apart from the cash rate."]];
+var flt=$("flt"),flb=$("flb");
+function sf(i){flb.innerHTML="";Array.prototype.forEach.call(flt.children,function(b,k){b.classList.toggle("on",k===i)});["What is happening","What it means for you","The skill underneath"].forEach(function(h,j){var d=el("div","fx");d.appendChild(el("b","",h));d.appendChild(el("p","",FL[i][j+1]));flb.appendChild(d)})}
+FL.forEach(function(f,i){var b=el("button","",f[0]);b.type="button";b.onclick=function(){sf(i)};flt.appendChild(b)});sf(0);
+var FP=[["Real beats nominal","Judge every return and pay rise after inflation. A 4% gain in a 4.3% inflation year is a small loss in purchasing power."],["Compounding cuts both ways","Interest works for savers and against borrowers. The earlier it starts working for you, the less effort it takes."],["Time beats timing","Long horizons turn small, regular contributions into large outcomes. Trying to pick the perfect moment rarely does."],["Risk, return and fees","Higher expected returns come with higher risk. Diversification trims risks you are not paid to take; fees compound too."],["Buffers for shocks","Savings, insurance and stress-tested loans turn a bad month into an inconvenience rather than a crisis."],["Verify before you act","Urgency, secrecy and guaranteed returns are warning signs. Check licences and offers independently first."]];
+FP.forEach(function(p,i){var d=el("div","card fcard");d.appendChild(el("i","","0"+(i+1)));d.appendChild(el("h3","",p[0]));d.appendChild(el("p","",p[1]));$("flp").appendChild(d)});
+function fm(x){return "$"+Math.round(x).toLocaleString("en-AU")}
+function pm(P,r,n){r=r/1200;n*=12;return r?P*r/(1-Math.pow(1+r,-n)):P/n}
+function mc(){var P=+$("m1").value,n=+$("m2").value,a=+$("m3").value,b=+$("m4").value,x=pm(P,a,n),y=pm(P,b,n),d=y-x;$("m1v").textContent=fm(P);$("m2v").textContent=n+" years";$("m3v").textContent=a.toFixed(2)+"%";$("m4v").textContent=b.toFixed(2)+"%";$("mo3").textContent=(d<0?"−":"+")+fm(Math.abs(d));$("mo4").textContent="From "+fm(x)+" to "+fm(y)+" a month, a difference of "+fm(Math.abs(d)*12)+" a year."}
+function cp(){var s=+$("k1").value,m=+$("k2").value,r=+$("k3").value/1200,y=+$("k4").value,n=y*12,g=Math.pow(1+r,n),fv=s*g+(r?m*(g-1)/r:m*n),put=s+m*n;$("k1v").textContent=fm(s);$("k2v").textContent=fm(m);$("k3v").textContent=(+$("k3").value).toFixed(2)+"%";$("k4v").textContent=y+" years";$("cout").textContent=fm(fv);$("cbar").style.width=(fv>0?Math.min(100,put/fv*100):100)+"%";$("cnote").textContent="You put in "+fm(put)+" and growth added "+fm(fv-put)+". The bar shows your contributions as a share of the total."}
+["m1","m2","m3","m4"].forEach(function(i){$(i).addEventListener("input",mc)});["k1","k2","k3","k4"].forEach(function(i){$(i).addEventListener("input",cp)});mc();cp();
+cc2("chs","Prices are rising faster than pay","Annual change to September 2026, %","ABS CPI (28 Oct 2026) and Wage Price Index (18 Nov 2026)",barSvg([["Trimmed mean",3.6],["Wages (WPI)",3.5],["CPI headline",4.3]],6,"%"));
+cc2("chs","Australian CPI inflation through 2026","Annual change in the CPI, %","ABS Consumer Price Index, Nov 2025 to Sep 2026",barSvg([["Nov 25",3.4],["Feb",3.7],["Mar",4.6],["Jun",3.8],["Jul",3.5],["Aug",4.0],["Sep",4.3]],6,"%"));
+cc2("chs","Unemployment has climbed since May","Seasonally adjusted unemployment rate, %","ABS Labour Force, Australia (May, Jul, Sep, Oct 2026)",barSvg([["May",4.3],["Jul",4.5],["Sep",4.7],["Oct",4.9]],6,"%"));
+cc2("chs","Policy rates: Australia and the US","Central bank target, % (top of the range for the Fed)","RBA, 3 Nov 2026; US Federal Reserve, 28 Oct 2026",barSvg([["Fed (top)",4],["RBA",4.85]],6,"%"));
+cc2("chs","RBA forecast: inflation easing by 2028","CPI inflation, year-ended, %","RBA Statement on Monetary Policy, Nov 2026",barSvg([["Jun 26",3.9],["Dec 26",4.5],["Jun 27",3.7],["Dec 27",2.7],["Jun 28",2.5]],6,"%"));
+cc2("chs","RBA forecast: unemployment drifting up","Unemployment rate, quarterly average, %","RBA Statement on Monetary Policy, Nov 2026",barSvg([["Jun 26",4.4],["Dec 26",4.7],["Jun 27",4.8],["Dec 27",4.9],["Jun 28",5.0]],6,"%"));
+
+/* v4: data files, hero ticker, theme toggle */
+var TK=[["RBA cash rate","4.85%"],["CPI inflation","4.3%"],["Unemployment","4.9%"],["Wage growth","3.5%"],["US Fed funds","3.75–4%"]];
+function tkr(a,u){var t=$("tk");t.innerHTML="";a.forEach(function(x){var d=el("div");d.appendChild(el("small","",x[0]));d.appendChild(el("b","",x[1]));t.appendChild(d)});$("tkn").textContent="Latest releases"+(u?" as of "+u:"")+". Sources: RBA, ABS, US Federal Reserve."}
+tkr(TK,"21 Nov 2026");
+fetch("data/economy.json").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+if(Array.isArray(j.ticker)&&j.ticker.length)tkr(j.ticker,j.updated);
+if(j.updated)document.querySelector("#dash .tag").textContent="Data dashboard · updated "+j.updated;
+if(Array.isArray(j.cards)&&j.cards.length){var st=document.querySelector("#dash .st");st.innerHTML="";j.cards.forEach(function(c){var d=el("div","stc");d.appendChild(el("small","",c.label));d.appendChild(el("div","num",c.value));d.appendChild(el("p","",c.note));st.appendChild(d)})}
+if(Array.isArray(j.calendar)&&j.calendar.length){var tb=document.querySelector("#dash .tbl tbody");tb.innerHTML="";j.calendar.forEach(function(c){var tr=el("tr");c.forEach(function(v){tr.appendChild(el("td","",v))});tb.appendChild(tr)})}
+}).catch(function(){});
+var tg=el("button","tgl","◐");tg.type="button";tg.setAttribute("aria-label","Switch between light and dark theme");
+tg.onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"),n=d==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("cc-theme",n)}catch(e){}};
+document.body.appendChild(tg);try{var th=localStorage.getItem("cc-theme");if(th)document.documentElement.setAttribute("data-theme",th)}catch(e){}
 })();
 </script>
 <script>
