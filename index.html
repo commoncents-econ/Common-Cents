@@ -1,102 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Econ Basics: Learn Economics with Australian Data</title>
-<meta name="description" content="Plain-English economics lessons, a searchable glossary, and live RBA cash rate data for Australian learners.">
+<title>Common Cents: Economics Explained Clearly</title>
+<meta name="description" content="Common Cents: interactive economics lessons, a guide to writing top exam answers, an economics dictionary, and live RBA cash rate data.">
 <style>
-:root{--bg:#faf8f3;--sf:#fff;--tx:#1d2433;--mu:#5b6475;--ac:#1f6f5c;--ai:#fff;--ln:#e3dfd3;--ok:#1f7a45;--bad:#b3392f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12161d;--sf:#1b212b;--tx:#eceff4;--mu:#a3adbd;--ac:#4cc3a4;--ai:#0c1a16;--ln:#2c3441;--ok:#5fd08a;--bad:#ff8a80}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#12161d;--sf:#1b212b;--tx:#eceff4;--mu:#a3adbd;--ac:#4cc3a4;--ai:#0c1a16;--ln:#2c3441;--ok:#5fd08a;--bad:#ff8a80}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 Georgia,"Times New Roman",serif}
-h1,h2,h3,nav,button,input,.t{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:900px;margin:0 auto;padding:0 20px}
-nav{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;font-size:15px;border-bottom:1px solid var(--ln)}
-nav strong{margin-right:auto;font-size:18px}nav a{color:var(--mu);text-decoration:none}nav a:hover{color:var(--ac)}
-.hero{padding:56px 0 36px}.hero h1{font-size:clamp(32px,6vw,50px);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
-.hero p{font-size:19px;color:var(--mu);max-width:600px;margin:0}
-section{padding:40px 0;border-top:1px solid var(--ln)}h2{font-size:28px;margin:0 0 6px}.sub{color:var(--mu);margin:0 0 20px}
-.box{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:20px}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.tab,.opt{border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:999px;padding:8px 14px;font-size:15px;cursor:pointer}
-.tab.on{background:var(--ac);color:var(--ai);border-color:var(--ac)}
-.opt{display:block;width:100%;text-align:left;border-radius:8px;margin-bottom:8px;font-size:16px}.opt:hover{border-color:var(--ac)}
-.opt.r{border-color:var(--ok);color:var(--ok)}.opt.x{border-color:var(--bad);color:var(--bad)}
-.lesson h3{margin:0 0 8px;font-size:22px}.lesson p{margin:0 0 12px}
-.chk{border-top:1px dashed var(--ln);margin-top:16px;padding-top:14px}.chk b{font-family:system-ui,sans-serif}
-.why{color:var(--mu);font-size:15px;margin:6px 0 0}
-.hint{background:none;border:0;color:var(--ac);cursor:pointer;padding:0;font-size:15px}
-input[type=search]{width:100%;font-size:17px;padding:11px 14px;border-radius:10px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);margin-bottom:14px}
-dl{margin:0}dt{font-weight:700;font-family:system-ui,sans-serif;margin-top:14px}dd{margin:2px 0 0;color:var(--mu)}
+:root{--bg:#fff;--sf:#f5f4f2;--tx:#111;--mu:#5d5d63;--ac:#c8102e;--ai:#fff;--ln:#dcdbd8;--ok:#1f7a45;--bad:#c8102e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f0f10;--sf:#1a1a1c;--tx:#f2f2f2;--mu:#a3a3ab;--ac:#ff5468;--ai:#190205;--ln:#303034;--ok:#5fd08a;--bad:#ff8a80}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f0f10;--sf:#1a1a1c;--tx:#f2f2f2;--mu:#a3a3ab;--ac:#ff5468;--ai:#190205;--ln:#303034;--ok:#5fd08a;--bad:#ff8a80}
+html{scroll-behavior:smooth;scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,nav,button,input,textarea,.u{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+.bar{background:var(--tx);color:var(--bg);font:12px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 0}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--ln);z-index:5}
+nav{display:flex;align-items:center;gap:24px;padding:14px 0;font-size:15px;font-weight:600}
+nav a{color:var(--tx);text-decoration:none;background:linear-gradient(var(--ac),var(--ac)) 0 100%/0 2px no-repeat;transition:background-size .25s}nav a:hover{background-size:100% 2px}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto;font:800 22px system-ui,sans-serif;letter-spacing:-.02em}
+.logo i{display:grid;place-items:center;width:30px;height:30px;background:var(--ac);color:var(--ai);font-style:normal;font-size:18px;transition:transform .5s}.logo:hover i{transform:rotateY(360deg)}
+@media(max-width:700px){nav{gap:12px;font-size:13px;flex-wrap:wrap}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.main{display:grid;grid-template-columns:2fr 1fr;gap:40px;padding:44px 0 36px}
+@media(max-width:800px){.main{grid-template-columns:1fr}}
+.tag{font:700 12px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin:0 0 10px}
+.feat h1{font:800 clamp(34px,5.5vw,54px)/1.08 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:-.02em;margin:0 0 16px}
+.feat p{color:var(--mu);font-size:20px;margin:0 0 22px}
+.btn{display:inline-block;background:var(--ac);color:var(--ai);border:0;padding:13px 22px;font:700 15px system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 6px 0 var(--tx)}
+.side{border-left:1px solid var(--ln);padding-left:30px}
+@media(max-width:800px){.side{border-left:0;padding-left:0;border-top:1px solid var(--ln);padding-top:24px}}
+.side h3{font:700 13px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;border-bottom:3px solid var(--tx);padding-bottom:8px}
+.side a{display:block;color:var(--tx);font:600 16px system-ui,sans-serif;padding:11px 0;border-bottom:1px solid var(--ln);cursor:pointer;transition:padding .2s,color .2s}.side a:hover{color:var(--ac);padding-left:10px}
+.strip{background:var(--sf);border-block:1px solid var(--ln)}
+.strip .w{display:flex;gap:28px;align-items:baseline;flex-wrap:wrap;padding-block:16px;font-family:system-ui,sans-serif}
+.strip b{font:800 28px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ac)}.strip span{font-size:14px;color:var(--mu)}.strip a{margin-left:auto;font-weight:700;font-size:14px;color:var(--tx)}
+section{padding:56px 0 8px}
+h2{font:800 30px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0 0 6px;border-top:3px solid var(--tx);padding-top:14px;letter-spacing:-.01em}
+h3.sec{font:800 22px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:34px 0 4px}
+.sub{color:var(--mu);margin:0 0 22px;font-size:17px}
+.car{overflow:hidden}.track{display:flex;align-items:flex-start;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.slide{min-width:100%;background:var(--sf);padding:32px;border-left:5px solid var(--ac);opacity:.35;transition:opacity .5s}.slide.act{opacity:1}
+.slide h3{font:800 32px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0 0 14px}.slide p{margin:0 0 14px}
+.ctl{display:flex;align-items:center;gap:14px;margin-top:16px}
+.ar{width:46px;height:46px;border:2px solid var(--tx);background:var(--bg);color:var(--tx);font-size:20px;cursor:pointer;transition:background .2s,color .2s,transform .2s}.ar:hover{background:var(--tx);color:var(--bg);transform:scale(1.06)}
+#dots{display:flex;gap:8px;flex:1}.dot{height:6px;flex:1;max-width:60px;background:var(--ln);border:0;padding:0;cursor:pointer;transition:background .3s}.dot.on{background:var(--ac)}
+.chk{background:var(--bg);border:1px solid var(--ln);padding:20px;margin-top:20px}.chk b{display:block;margin-bottom:12px;font-family:system-ui,sans-serif}
+.opt{display:block;width:100%;text-align:left;margin-bottom:8px;padding:11px 14px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);font:16px system-ui,sans-serif;cursor:pointer;transition:transform .15s,border-color .15s}
+.opt:hover{border-color:var(--tx);transform:translateX(5px)}.opt.r{border-color:var(--ok);color:var(--ok);font-weight:700}.opt.x{border-color:var(--bad);color:var(--bad)}
+.hint{background:none;border:0;color:var(--ac);cursor:pointer;padding:0;font:600 15px system-ui,sans-serif}
+.why{color:var(--mu);font:15px system-ui,sans-serif;margin:6px 0 0}
+.cw{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.fc{perspective:900px;height:190px;cursor:pointer;background:none;border:0;padding:0;text-align:left;color:inherit}
+.fi{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}.fc.fl .fi{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;padding:20px;border:1px solid var(--ln)}
+.ff{background:var(--tx);color:var(--bg);display:flex;flex-direction:column;justify-content:flex-end}.ff b{font:800 28px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}.ff span{font:13px system-ui,sans-serif;opacity:.8}
+.fb{background:var(--sf);transform:rotateY(180deg);font:15px/1.5 system-ui,sans-serif;overflow:auto}.fb b{color:var(--ac)}
+.model{background:var(--sf);padding:26px;border-left:5px solid var(--ac)}.model .q{font:700 17px system-ui,sans-serif;margin:0 0 14px}
+.seg{cursor:pointer;padding:2px 0;border-bottom:3px solid;transition:background .2s}.seg:hover,.seg.on{background:rgba(200,16,46,.12)}
+.mt{display:flex;gap:8px;margin-bottom:10px}.mb{border:2px solid currentColor;background:none;color:inherit;padding:6px 12px;font:700 13px system-ui,sans-serif;cursor:pointer;transition:transform .2s}.mb:hover{transform:translateY(-2px)}.mb.on{background:var(--ac);color:var(--ai);border-color:var(--ac)}
+.s0{border-color:#c8102e}.s1{border-color:#1769c2}.s2{border-color:#1f9a55}.s3{border-color:#d68a00}
+#segnote{margin-top:14px;padding:14px 16px;background:var(--bg);border:1px solid var(--ln);font:15px/1.5 system-ui,sans-serif;min-height:60px}
+textarea{width:100%;min-height:150px;font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:14px;border:2px solid var(--tx);background:var(--bg);color:var(--tx);border-radius:0;resize:vertical}
+.try{display:grid;grid-template-columns:2fr 1fr;gap:22px}@media(max-width:760px){.try{grid-template-columns:1fr}}
+.cl{list-style:none;margin:0;padding:0;font:15px system-ui,sans-serif}.cl li{padding:10px 0;border-bottom:1px solid var(--ln);display:flex;gap:10px;transition:color .3s}
+.cl li::before{content:"○";color:var(--mu)}.cl li.ok{color:var(--ok);font-weight:700}.cl li.ok::before{content:"●";color:var(--ok)}
+input[type=search]{width:100%;font:17px system-ui,sans-serif;padding:14px 16px;border:2px solid var(--tx);background:var(--bg);color:var(--tx);margin-bottom:6px;border-radius:0}
+.az dt{font:800 19px Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin-top:22px;padding-top:14px;border-top:1px solid var(--ln)}.az dd{margin:4px 0 0;color:var(--mu);font-size:16px}
 svg{width:100%;height:auto;display:block}.ax{fill:var(--mu);font:12px system-ui,sans-serif}
-.tbl{width:100%;border-collapse:collapse;font:15px system-ui,sans-serif;margin-top:14px}.tbl td,.tbl th{padding:8px;border-bottom:1px solid var(--ln);text-align:left}
-.note{font-size:14px;color:var(--mu);margin-top:10px}a{color:var(--ac)}
-footer{padding:28px 0 40px;color:var(--mu);font-size:14px;border-top:1px solid var(--ln)}
+.dr polyline{stroke-dasharray:1;stroke-dashoffset:1}.dr.in polyline{animation:dr 1.8s ease forwards}@keyframes dr{to{stroke-dashoffset:0}}
+.box{border:1px solid var(--ln);padding:24px}
+.tbl{width:100%;border-collapse:collapse;font:15px system-ui,sans-serif;margin-top:18px}.tbl td,.tbl th{padding:10px 6px;border-bottom:1px solid var(--ln);text-align:left}
+.note{font:14px system-ui,sans-serif;color:var(--mu);margin-top:10px}a{color:var(--ac)}
+footer{margin-top:64px;background:var(--tx);color:var(--bg);padding:34px 0 44px;font:14px system-ui,sans-serif}footer b{font-size:18px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.dr polyline{stroke-dashoffset:0}}
+
+/* polish */
+h1,h2,h3,.logo{letter-spacing:-.025em}
+.slide,.chk,.model,.try>div,.box,.fc,.calc{border-radius:14px}
+.slide{box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.btn,.ar,.opt,.mb,input[type=search],textarea,.hint{border-radius:10px}
+.opt:hover{transform:translateX(6px);border-color:var(--ac)}
+.opt.r{background:rgba(31,154,85,.14);border-color:var(--ok)}.opt.x{background:rgba(200,16,46,.1);border-color:var(--bad)}
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--ac);z-index:20;transition:width .1s}
+.sc{font:700 14px Inter,system-ui,sans-serif;color:var(--mu);white-space:nowrap}.sc b{color:var(--ac);display:inline-block;transition:transform .3s}.sc b.pop{transform:scale(1.6)}
+.calc{background:var(--sf);padding:26px;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:26px}@media(max-width:760px){.calc{grid-template-columns:1fr}}
+.calc label{display:flex;justify-content:space-between;font:600 14px Inter,system-ui,sans-serif;margin:14px 0 6px}.calc label:first-child{margin-top:0}
+.calc input[type=range]{width:100%;accent-color:var(--ac)}
+.res{font:800 clamp(36px,7vw,56px)/1 Inter,system-ui,sans-serif;color:var(--ac);letter-spacing:-.03em}
+.cmp{height:14px;background:var(--ln);border-radius:8px;overflow:hidden;margin:10px 0 4px}.cmp i{display:block;height:100%;background:var(--ac);width:100%;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.fc{transition:transform .25s}.fc:hover{transform:translateY(-6px)}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tabs button{border:2px solid var(--tx);background:var(--bg);color:var(--tx);padding:8px 16px;border-radius:99px;font:700 14px Inter,system-ui,sans-serif;cursor:pointer;transition:all .2s}.tabs button:hover{transform:translateY(-2px)}.tabs button.on{background:var(--ac);border-color:var(--ac);color:var(--ai)}
+.mp{background:var(--sf);border-radius:14px;padding:26px;border-left:5px solid var(--ac);min-height:150px;animation:fi .4s}@keyframes fi{from{opacity:0;transform:translateY(10px)}}
+.mp h3{margin:0 0 8px;font-size:24px}.mp ul{margin:10px 0 0;padding-left:20px}.mp li{margin:4px 0}
+.bud{display:grid;grid-template-columns:1fr 2fr;gap:22px;margin-top:14px;align-items:start}@media(max-width:760px){.bud{grid-template-columns:1fr}}
+.bud input[type=number]{width:100%;font:700 22px Inter,sans-serif;padding:12px;border:2px solid var(--tx);border-radius:10px;background:var(--bg);color:var(--tx)}
+.bs{display:flex;height:34px;border-radius:10px;overflow:hidden;margin-bottom:14px}.bs i{display:block;transition:width .5s}
+.bl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.bl div{background:var(--sf);border-radius:10px;padding:12px;font:14px Inter,sans-serif}.bl b{display:block;font-size:22px}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}@media(max-width:760px){.st{grid-template-columns:1fr}}
+.stc{background:var(--ac);color:var(--ai);border-radius:14px;padding:22px;transition:transform .25s}.stc:hover{transform:translateY(-6px) rotate(-.5deg)}
+.stc .num{font:800 46px/1 Inter,sans-serif;letter-spacing:-.03em}.stc p{margin:8px 0 0;font:14px/1.4 Inter,sans-serif;opacity:.92}
+.msgs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(max-width:760px){.msgs{grid-template-columns:1fr}}
+.msgs div{border:1px solid var(--ln);border-radius:12px;padding:16px;font:600 16px/1.4 Inter,sans-serif;transition:border-color .2s,transform .2s}.msgs div:hover{border-color:var(--ac);transform:translateY(-3px)}
+.lit{display:grid;grid-template-columns:3fr 2fr;gap:30px;margin-top:14px}@media(max-width:760px){.lit{grid-template-columns:1fr}}.lead{font:600 21px/1.5 Inter,sans-serif}
+.pil{display:grid;gap:10px;align-content:start}.pil div{background:var(--sf);border-left:5px solid var(--ac);border-radius:10px;padding:16px;font:15px/1.4 Inter,sans-serif;transition:transform .2s}.pil div:hover{transform:translateX(8px)}.pil b{display:block;font-size:18px;margin-bottom:2px}
+nav{flex-wrap:wrap}
+.mod{display:grid;grid-template-columns:3fr 2fr;gap:22px;margin-top:14px}@media(max-width:760px){.mod{grid-template-columns:1fr}}
+.mod svg{background:var(--sf);border-radius:14px}.mod .ax2{stroke:var(--tx);stroke-width:1.5;fill:none}.lb{fill:var(--tx);font:700 12px Inter,sans-serif}.gh{stroke:var(--mu);stroke-dasharray:5 4;fill:none;opacity:.6}
+.ctrl{display:grid;gap:8px;align-content:start}.ctrl button{border:2px solid var(--tx);background:var(--bg);color:var(--tx);padding:10px;border-radius:10px;font:700 14px Inter,sans-serif;cursor:pointer;text-align:left;transition:transform .2s,background .2s}.ctrl button:hover{background:var(--ac);color:var(--ai);border-color:var(--ac);transform:translateX(5px)}
+.expl{background:var(--sf);border-left:5px solid var(--ac);border-radius:10px;padding:14px;font:15px/1.5 Inter,sans-serif;min-height:70px}
+canvas#pad{width:100%;height:auto;background:var(--sf);border-radius:14px;touch-action:none;cursor:crosshair}
+.qa textarea{min-height:130px}.mk label{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--ln);font:15px/1.4 Inter,sans-serif;cursor:pointer}
+.sm{background:var(--bg);border:1px solid var(--ln);border-radius:12px;padding:16px;margin-top:12px;font:15px/1.6 Inter,sans-serif}
+.dis{font:13px/1.5 Inter,sans-serif;color:var(--mu);margin-top:12px}
 </style>
 </head>
 <body>
+<div id="pg"></div>
+<div class="bar"><div class="w">Economics, explained clearly</div></div>
+<header><div class="w"><nav><div class="logo"><i>¢</i>Common Cents</div><a href="#learn">Lessons</a><a href="#about">What is it?</a><a href="#calc">Calculator</a><a href="#models">Models</a><a href="#qcaa">Practice</a><a href="#news">News &amp; politics</a><a href="#money">Money skills</a><a href="#women">Equity data</a><a href="#write">Write answers</a><a href="#dictionary">Dictionary</a><a href="#data">RBA data</a></nav></div></header>
+
+<div class="w"><div class="main">
+<div class="feat rv"><p class="tag">Featured lesson</p><h1>Why your money buys less every year</h1><p>Inflation quietly changes what every dollar is worth. Here’s how it works, who it hits, and what the RBA does about it.</p><button class="btn" id="go">Read the lesson →</button></div>
+<aside class="side rv"><h3>Trending terms</h3><a data-t="Cash rate">Cash rate</a><a data-t="Inflation">Inflation</a><a data-t="Opportunity cost">Opportunity cost</a><a data-t="Compound interest">Compound interest</a><a data-t="Recession">Recession</a></aside>
+</div></div>
+<div class="strip"><div class="w"><span class="u">RBA CASH RATE</span><b id="hr">4.85%</b><span id="hd">As of 4 Nov 2026</span><a href="#data">See the history →</a></div></div>
+
 <div class="w">
-<nav><strong>📈 Econ Basics</strong><a href="#learn">Lessons</a><a href="#glossary">Glossary</a><a href="#data">RBA data</a></nav>
-<div class="hero"><h1>Learn economics. See it in real Australian data.</h1><p>Short lessons with check questions, a plain-English glossary, and the RBA’s cash rate history, all in one place.</p></div>
+<section id="about" class="rv"><h2>What is financial literacy?</h2>
+<div class="lit"><div><p class="lead">Financial literacy is the knowledge and confidence to make sound decisions about earning, spending, saving, borrowing and investing money.</p><p>It is not about being wealthy or knowing every product. It is about understanding enough to read a contract, compare options, weigh risk and plan ahead, so that money works for your goals rather than against them.</p><p>Financial literacy sits alongside economic literacy. Economic literacy explains the wider forces, such as inflation, interest rates and the choices governments make. Together they let people make informed decisions in their own lives and take part in public debate.</p></div>
+<div class="pil"><div><b>Understand</b>How money, interest, inflation and risk work.</div><div><b>Plan</b>Set goals, build a budget and prepare for the unexpected.</div><div><b>Act</b>Compare options, avoid scams and make decisions with confidence.</div></div></div></section>
+<section id="learn" class="rv"><h2>Lessons</h2><p class="sub">Swipe through, or use the arrows. Each lesson ends with a check question.</p>
+<div class="car"><div class="track" id="track"></div></div>
+<div class="ctl"><button class="ar" id="pv" aria-label="Previous lesson">←</button><div id="dots"></div><span class="sc" id="scw">Score <b id="sc">0</b>/5</span><button class="ar" id="nx" aria-label="Next lesson">→</button></div></section>
 
-<section id="learn"><h2>Lessons</h2><p class="sub">Read, then answer the check question. Use the hint if you’re stuck.</p>
-<div class="tabs" id="tabs"></div><div class="box lesson" id="lesson"></div></section>
+<section id="calc" class="rv"><h2>Inflation calculator</h2><p class="sub">Drag the sliders to see what inflation does to your money.</p>
+<div class="calc"><div><label>Amount <span id="vA">$100</span></label><input type="range" id="rA" min="10" max="1000" step="10" value="100"><label>Inflation per year <span id="vI">3%</span></label><input type="range" id="rI" min="0" max="10" step="0.5" value="3"><label>Years <span id="vY">10</span></label><input type="range" id="rY" min="1" max="40" value="10"></div>
+<div><p class="u" style="margin:0;color:var(--mu);font:600 14px Inter,sans-serif">In <b id="yy">10</b> years, your <b id="aa">$100</b> buys what this buys today:</p><div class="res" id="out">$74</div><div class="cmp"><i id="bar"></i></div><p class="note" id="cn" style="margin:6px 0 0"></p></div></div></section>
+<section id="models" class="rv"><h2>Draw the model</h2><p class="sub">Economics is drawn as well as written. Use the interactive diagrams, then sketch your own.</p>
+<div class="tabs" id="mdt"></div>
+<div class="mod"><div><svg id="msvg" viewBox="0 0 400 300" role="img" aria-label="Economic model diagram"></svg></div><div class="ctrl" id="mctl"></div></div>
+<div class="expl" id="mex" style="margin-top:14px"></div>
+<h3 class="sec">Sketch it yourself</h3><p class="sub">Draw a supply and demand diagram on the grid. Label the axes, both curves and the equilibrium.</p>
+<canvas id="pad" width="800" height="450"></canvas><p style="margin:10px 0"><button class="btn" id="clr" style="padding:9px 16px">Clear</button></p>
+<ul class="cl"><li>Axes labelled: price (P) and quantity (Q)</li><li>Each curve labelled (D, S)</li><li>Equilibrium point marked, with dashed lines to the axes</li><li>Shift shown with an arrow and a new labelled curve (D1)</li><li>New equilibrium and the change in P and Q stated</li></ul></section>
+<section id="qcaa" class="rv"><h2>Senior economics practice</h2><p class="sub">Short-response and extended questions in the style of senior economics. Write your answer, reveal the model response, then tick the marking points you covered.</p>
+<div class="tabs" id="qt"></div><div class="qa"><p class="q u" style="font-weight:700;font-size:18px;margin:0 0 10px" id="qq"></p><textarea id="qans" placeholder="Write your answer here…" aria-label="Your answer"></textarea><p style="margin:10px 0"><button class="btn" id="qshow" style="padding:10px 18px">Show model answer</button></p><div id="qout"></div></div>
+<p class="dis">These questions are written for this site in the style of senior economics and are not official QCAA material. Check the current syllabus and assessment advice from your teacher and at qcaa.qld.edu.au.</p></section>
+<section id="news" class="rv"><h2>Understanding the news and politics</h2><p class="sub">How to read claims, check sources and follow public debate, whatever your views. These skills apply to every side of every issue.</p>
+<div class="tabs" id="nt"></div><div class="mp" id="nm"></div>
+<h3 class="sec">Fact, opinion or prediction?</h3><p class="sub">Classify each statement. Facts can be checked, opinions are judgements, and predictions can’t be checked yet.</p><div id="fo"></div></section>
+<section id="money" class="rv"><h2>Money skills for life</h2><p class="sub">Practical basics for everyone. Pick a topic.</p><div class="tabs" id="mtabs"></div><div class="mp" id="mp"></div>
+<h3 class="sec">Try a budget split</h3><p class="sub">The 50/30/20 rule is a common starting point: needs, wants, savings. It is a guide, not a rule for everyone.</p>
+<div class="bud"><div><label class="u" for="inc" style="font-weight:700;font-size:14px">Your monthly after-tax income ($)</label><input type="number" id="inc" value="4000" min="0" step="100"></div><div><div class="bs"><i style="background:#c8102e;width:50%"></i><i style="background:#1769c2;width:30%"></i><i style="background:#1f9a55;width:20%"></i></div><div class="bl"><div>Needs 50%<b id="bn">$2,000</b></div><div>Wants 30%<b id="bw">$1,200</b></div><div>Savings 20%<b id="bsv">$800</b></div></div></div></div></section>
+<section id="women" class="rv"><h2>Gender and financial outcomes</h2><p class="sub">Financial literacy matters for everyone. The latest Australian data shows that financial outcomes still differ by gender, which is why informed decisions about pay, super and saving matter.</p>
+<div class="st"><div class="stc"><div class="num"><span class="cn" data-v="19.7" data-d="1" data-s="%">0%</span></div><p>National gender pay gap in total pay, 2025-26 (WGEA). Below 20% for the first time.</p></div><div class="stc"><div class="num"><span class="cn" data-v="27400" data-d="0" data-p="$">$0</span></div><p>About how much less women earn than men each year on average (WGEA).</p></div><div class="stc"><div class="num"><span class="cn" data-v="11.3" data-d="1" data-s="%">0%</span></div><p>Gap in average weekly ordinary-time earnings, May 2026 (ABS). It differs because it measures something narrower.</p></div></div>
+<p class="note">Sources: Workplace Gender Equality Agency 2025-26 Scorecard (released 18 Nov 2026); ABS via WGEA Equal Pay Day 2026. The gap compares average pay and is not the same as unequal pay for the same job. Drivers include caring responsibilities and job and industry segregation.</p>
+<h3 class="sec">Key takeaways</h3><div class="msgs"><div>Know your numbers: income, spending, debts and savings.</div><div>Research pay for your role, and negotiate using evidence.</div><div>Career breaks for caring can reduce super. Review your balance and options regularly.</div><div>Financial skills can be learned by anyone. Start small and stay consistent.</div><div>Discuss money openly with partners and family and plan together.</div><div>Be cautious with offers that promise high returns. Verify before you act.</div></div></section>
+<section id="write"><h2 class="rv">Write better answers</h2><p class="sub rv">For students: how to turn what you know into marks.</p>
+<h3 class="sec rv">1. Know the command word</h3><p class="sub rv">The first word of the question tells you what to do. Tap a card.</p>
+<div class="cw rv" id="cw"></div>
+<h3 class="sec rv">2. See what a strong answer looks like</h3><p class="sub rv">Tap any sentence to see its job. The structure is Point, Evidence, Explain, Link (PEEL).</p>
+<div class="model rv"><div class="mt" id="mt"></div><p class="q" id="mq"></p>
+<p id="ans"></p><div id="segnote">Tap a sentence above.</div></div>
+<h3 class="sec rv">3. Try writing your own</h3><p class="sub rv">Write a paragraph for the question below. The checker looks for key habits as you type. It isn’t a marker, just a prompt.</p>
+<div class="try rv"><div><p class="q u"><b>Explain why a rise in demand for concert tickets can raise their price.</b></p><textarea id="ta" placeholder="Start with your point…" aria-label="Your answer"></textarea><div class="note" id="wc">0 words</div></div>
+<ul class="cl" id="cl"><li id="c1">Explains with “because” or “therefore” reasoning</li><li id="c2">Gives a number or example</li><li id="c3">Weighs a limit or counterpoint (“however”)</li><li id="c4">At least 60 words</li></ul></div></section>
 
-<section id="glossary"><h2>Glossary</h2><p class="sub">Search any term.</p>
-<input type="search" id="gs" placeholder="Search terms, e.g. inflation" aria-label="Search glossary"><dl id="gl"></dl></section>
+<section id="dictionary" class="rv"><h2>Economics dictionary</h2><p class="sub">Plain-English definitions, A to Z.</p>
+<input type="search" id="gs" placeholder="Search the dictionary" aria-label="Search the dictionary"><dl class="az" id="gl"></dl></section>
 
-<section id="data"><h2>RBA cash rate</h2>
-<p class="sub">The cash rate target is the interest rate the RBA sets. It influences loan rates, savings rates, and inflation.</p>
+<section id="data" class="rv"><h2>The RBA cash rate</h2>
+<p class="sub">The interest rate set by the Reserve Bank of Australia. It influences loan rates, savings rates, and inflation.</p>
 <div class="box"><div id="chart"></div><div class="note" id="dnote"></div>
 <table class="tbl"><thead><tr><th>Effective</th><th>Change</th><th>Cash rate</th></tr></thead><tbody>
-<tr><td>30 Sep 2026</td><td>+0.25</td><td>4.60%</td></tr>
-<tr><td>12 Aug 2026</td><td>0.00</td><td>4.35%</td></tr>
-<tr><td>17 Jun 2026</td><td>0.00</td><td>4.35%</td></tr></tbody></table>
-<p class="note">Table shows recent decisions as listed on <a href="https://www.rba.gov.au/statistics/cash-rate/">rba.gov.au/statistics/cash-rate</a> when this page was built. Always check the RBA for the latest figure.</p></div></section>
+<tr><td>4 Nov 2026</td><td>+0.25</td><td>4.85%</td></tr><tr><td>30 Sep 2026</td><td>+0.25</td><td>4.60%</td></tr><tr><td>12 Aug 2026</td><td>0.00</td><td>4.35%</td></tr><tr><td>17 Jun 2026</td><td>0.00</td><td>4.35%</td></tr></tbody></table>
+<p class="note">Recent decisions as listed on <a href="https://www.rba.gov.au/statistics/cash-rate/">rba.gov.au/statistics/cash-rate</a> when this page was built. Check the RBA for the latest.</p></div></section>
 </div>
-<footer><div class="w">General education only, not financial advice. Data source: Reserve Bank of Australia.</div></footer>
+<footer><div class="w"><b>Common Cents</b><br>General education only, not financial advice. Data source: Reserve Bank of Australia.</div></footer>
 
 <script>
 (function(){
-var $=function(i){return document.getElementById(i)};
+var $=function(i){return document.getElementById(i)},el=function(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+function rv(){Array.prototype.forEach.call(document.querySelectorAll('.rv,.dr'),function(n){io.observe(n)})}rv();
+
 var L=[
-{t:'Inflation',p:['Inflation is the general rise in prices over time. If inflation is 3%, something that cost $100 last year costs about $103 now.','It matters because your money buys less unless your wages and savings keep up. Central banks like the RBA aim to keep inflation low and stable, around 2 to 3% in Australia.'],q:'Prices rise 4% a year and your savings earn 2%. Your buying power…',o:['Grows','Shrinks','Stays the same'],a:1,h:'Compare the two rates. Which is bigger?',w:'Prices outpace your savings, so each dollar buys less.'},
-{t:'Interest rates',p:['An interest rate is the price of borrowing money, and the reward for saving it. The RBA’s cash rate target is the benchmark that banks’ loan and savings rates follow.','When the RBA raises the cash rate, borrowing gets more expensive and people spend less, which cools inflation. When it cuts, borrowing gets cheaper and spending tends to rise.'],q:'The RBA raises the cash rate. What usually happens to variable mortgage rates?',o:['They tend to rise','They tend to fall','Nothing'],a:0,h:'Banks pass on higher funding costs.',w:'Variable loan rates generally follow the cash rate up.'},
-{t:'Supply and demand',p:['Demand is how much people want something at a given price. Supply is how much is available. Prices settle where the two meet.','If more people want something and supply can’t keep up, the price rises. If supply jumps or interest fades, the price falls.'],q:'A venue has fixed seats and demand for tickets jumps. Prices tend to…',o:['Fall','Rise','Stay the same'],a:1,h:'Supply is fixed here.',w:'More demand with the same supply pushes prices up.'},
-{t:'Opportunity cost',p:['Every choice means giving something up. The opportunity cost is the value of the next best thing you didn’t choose.','It applies to time as well as money: an hour spent studying is an hour not spent working or resting.'],q:'You spend $50 on a game instead of dinner. The dinner is your…',o:['Sunk cost','Opportunity cost','Tax'],a:1,h:'It’s the best alternative you gave up.',w:'Opportunity cost is the next best alternative forgone.'}];
-var tabs=$('tabs'),box=$('lesson');
-function show(i){
-Array.prototype.forEach.call(tabs.children,function(b,j){b.classList.toggle('on',i===j)});
-var x=L[i];box.innerHTML='';
-var h=document.createElement('h3');h.textContent=x.t;box.appendChild(h);
-x.p.forEach(function(s){var p=document.createElement('p');p.textContent=s;box.appendChild(p)});
-var c=document.createElement('div');c.className='chk';
-var q=document.createElement('p');q.innerHTML='<b></b>';q.firstChild.textContent='Check: '+x.q;c.appendChild(q);
-var hb=document.createElement('button');hb.className='hint';hb.textContent='Need a hint?';
-var hp=document.createElement('p');hp.className='why';hb.onclick=function(){hp.textContent=x.h};
-var done=false,why=document.createElement('p');why.className='why';
-x.o.forEach(function(t,k){var b=document.createElement('button');b.className='opt';b.textContent=t;
-b.onclick=function(){if(done)return;done=true;var ks=c.querySelectorAll('.opt');
-if(k===x.a)b.classList.add('r');else{b.classList.add('x');ks[x.a].classList.add('r')}why.textContent=x.w};c.appendChild(b)});
-c.appendChild(hb);c.appendChild(hp);c.appendChild(why);box.appendChild(c)}
-L.forEach(function(x,i){var b=document.createElement('button');b.className='tab';b.textContent=x.t;b.onclick=function(){show(i)};tabs.appendChild(b)});show(0);
+{t:'Inflation',p:['Inflation is the general rise in prices over time. At 3%, something that cost $100 last year costs about $103 now.','It matters because your money buys less unless your wages and savings keep up. The RBA aims to keep inflation around 2 to 3%.'],q:'Prices rise 4% a year and your savings earn 2%. Your buying power…',o:['Grows','Shrinks','Stays the same'],a:1,h:'Compare the two rates. Which is bigger?',w:'Prices outpace your savings, so each dollar buys less.'},
+{t:'Interest rates',p:['An interest rate is the price of borrowing money and the reward for saving it. The RBA’s cash rate is the benchmark banks follow.','When the RBA raises it, borrowing costs more and people spend less, which cools inflation. When it cuts, borrowing gets cheaper and spending tends to rise.'],q:'The RBA raises the cash rate. Variable mortgage rates usually…',o:['Rise','Fall','Do nothing'],a:0,h:'Banks pass on higher funding costs.',w:'Variable loan rates generally follow the cash rate up.'},
+{t:'Supply and demand',p:['Demand is how much people want something at a price. Supply is how much is available. Prices settle where the two meet.','More demand with the same supply pushes prices up. More supply or less interest pushes them down.'],q:'Fixed seats, but demand for tickets jumps. Prices tend to…',o:['Fall','Rise','Stay the same'],a:1,h:'Supply can’t change here.',w:'More demand with fixed supply pushes prices up.'},
+{t:'Opportunity cost',p:['Every choice means giving something up. The opportunity cost is the value of the next best thing you didn’t pick.','It applies to time too: an hour studying is an hour not working or resting.'],q:'You spend $50 on a game instead of dinner. The dinner is your…',o:['Sunk cost','Opportunity cost','Tax'],a:1,h:'It’s the best alternative you gave up.',w:'Opportunity cost is the next best alternative forgone.'},
+{t:'Compound interest',p:['Compounding means earning interest on your interest. Your money grows slowly at first, then faster.','Starting early matters more than starting big, because time does the heavy lifting.'],q:'Which grows faster over many years?',o:['Interest only on your original money','Interest on your money plus past interest','They grow the same'],a:1,h:'Think about what “on your interest” adds.',w:'Compounding adds interest to the base each period, so growth accelerates.'},
+{t:'Budgeting',p:['A budget is a plan that gives every dollar a job before you spend it. It shows what comes in, what goes out and what is left.','Start with needs such as rent and food, then savings, then wants. Reviewing it monthly keeps it realistic.'],q:'Which should a budget cover first?',o:['Wants','Needs','Impulse buys'],a:1,h:'Think about what you cannot go without.',w:'Needs come first so essentials are always paid for.'},
+{t:'Saving and emergency funds',p:['An emergency fund is money set aside for surprises such as a car repair or lost income. Many people aim for a few months of essential costs.','Paying yourself first, by moving money to savings as soon as you are paid, makes saving automatic.'],q:'What is the main purpose of an emergency fund?',o:['Covering unexpected costs','Buying holidays','Investing in shares'],a:0,h:'The word “emergency” is the clue.',w:'It protects you from needing debt when something unexpected happens.'},
+{t:'Superannuation',p:['Super is money set aside for retirement. Employers pay a percentage of your wages into a fund, and it is invested over time.','Fees, investment choice and having a single fund all affect your final balance. Check current rules on ato.gov.au.'],q:'Why can having several super funds cost you?',o:['More fees can apply','Interest is higher','Tax is lower'],a:0,h:'Each fund can charge its own fees.',w:'Multiple accounts can mean paying fees more than once.'},
+{t:'Credit and debt',p:['Credit lets you borrow now and pay later, but interest makes it cost more. Credit cards charge high rates if you carry a balance.','Paying the full balance each month avoids interest. When repaying several debts, clearing the highest interest rate first saves the most.'],q:'Which debt is usually the most costly to carry?',o:['A low-rate home loan','A credit card balance','A scholarship'],a:1,h:'Look for the highest interest rate.',w:'Credit cards typically charge much higher interest than home loans.'},
+{t:'Investing and risk',p:['Investing means putting money into assets such as shares or property in the hope they grow. Higher potential returns usually come with higher risk.','Diversification, spreading money across different assets, reduces the damage if one of them performs badly.'],q:'What does diversification do?',o:['Guarantees profit','Spreads risk','Removes all fees'],a:1,h:'Think “don’t put all your eggs in one basket”.',w:'Spreading investments reduces reliance on any one asset.'},
+{t:'Tax basics',p:['Tax funds services such as health, education and roads. Australia uses a progressive system, where higher slices of income are taxed at higher rates.','A higher bracket applies only to the income above its threshold, not to all your earnings. Current rates are listed on ato.gov.au.'],q:'In a progressive system, a higher tax bracket applies to…',o:['All of your income','Only income above the threshold','Only savings'],a:1,h:'Think of income in slices.',w:'Each rate applies only to the slice of income within that bracket.'},
+{t:'GDP',p:['Gross domestic product measures the total value of goods and services produced in an economy over a period. It is the main gauge of economic size and growth.','When GDP grows, the economy is expanding. Two or more quarters of falling GDP is a common sign of recession.'],q:'GDP measures…',o:['Total value of production','Only exports','Government debt'],a:0,h:'Think “output of the whole economy”.',w:'GDP is the total value of goods and services produced.'},
+{t:'Unemployment',p:['The unemployment rate is the share of people in the labour force who want work and are looking for it but do not have a job.','A low rate suggests a strong job market. Very low unemployment can push wages and prices up, which the RBA watches.'],q:'Who counts as unemployed?',o:['Anyone without a job','People actively looking for work','Retired people'],a:1,h:'They must be searching.',w:'Unemployed people are without work and actively looking for it.'}];
+var track=$('track'),dots=$('dots'),cur=0;
+L.forEach(function(x,i){
+var s=el('div','slide'),c=el('div','chk');s.appendChild(el('p','tag','Lesson '+(i+1)+' of '+L.length));s.appendChild(el('h3','',x.t));
+x.p.forEach(function(t){s.appendChild(el('p','',t))});
+c.appendChild(el('b','','Check: '+x.q));var done=false,why=el('p','why');
+x.o.forEach(function(t,k){var b=el('button','opt',t);b.onclick=function(){if(done)return;done=true;if(k===x.a){var s0=$('sc');s0.textContent=+s0.textContent+1;s0.classList.add('pop');setTimeout(function(){s0.classList.remove('pop')},300)}var ks=c.querySelectorAll('.opt');if(k===x.a)b.classList.add('r');else{b.classList.add('x');ks[x.a].classList.add('r')}why.textContent=x.w};c.appendChild(b)});
+var hb=el('button','hint','Need a hint?'),hp=el('p','why');hb.onclick=function(){hp.textContent=x.h};
+c.appendChild(hb);c.appendChild(hp);c.appendChild(why);s.appendChild(c);track.appendChild(s);
+var d=el('button','dot');d.setAttribute('aria-label','Lesson '+(i+1));d.onclick=function(){go(i)};dots.appendChild(d)});
+$('scw').innerHTML='Score <b id="sc">0</b>/'+L.length;
+function go(i){cur=(i+L.length)%L.length;track.style.transform='translateX(-'+cur*100+'%)';
+Array.prototype.forEach.call(track.children,function(s,j){s.classList.toggle('act',j===cur)});
+Array.prototype.forEach.call(dots.children,function(d,j){d.classList.toggle('on',j===cur)})}
+go(0);$('pv').onclick=function(){go(cur-1)};$('nx').onclick=function(){go(cur+1)};
+var tx=0;track.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+track.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(cur+(d<0?1:-1))});
+$('go').onclick=function(){go(0);$('learn').scrollIntoView({behavior:'smooth'})};
 
-var G=[['Cash rate','The interest rate on overnight loans between banks. The RBA sets a target for it.'],['Inflation','The general rise in prices over time, reducing what each dollar can buy.'],['CPI (Consumer Price Index)','A measure of price changes for a typical basket of household goods and services.'],['Interest rate','The cost of borrowing money, or the return on saving it, as a percentage per year.'],['Opportunity cost','The value of the next best option you give up when you make a choice.'],['Scarcity','Limited resources versus unlimited wants, which forces choices.'],['Supply','How much of a good or service is available at a given price.'],['Demand','How much of a good or service people want at a given price.'],['GDP','The total value of goods and services produced in a country over a period.'],['Recession','A significant, widespread fall in economic activity, often seen as two quarters of falling GDP.'],['Unemployment rate','The share of people in the labour force who are looking for work but don’t have a job.'],['Compound interest','Interest earned on both your original money and previously earned interest.'],['Monetary policy','Central bank actions, mainly interest rates, to influence spending and inflation.'],['Fiscal policy','Government decisions on spending and taxation to influence the economy.'],['Exchange rate','The price of one currency in terms of another, such as AUD to USD.'],['Real vs nominal','Nominal values ignore inflation. Real values adjust for it.']];
-var gl=$('gl');function rg(f){gl.innerHTML='';G.filter(function(g){return (g[0]+' '+g[1]).toLowerCase().indexOf(f)>-1}).forEach(function(g){var a=document.createElement('dt');a.textContent=g[0];var b=document.createElement('dd');b.textContent=g[1];gl.appendChild(a);gl.appendChild(b)});if(!gl.children.length){gl.textContent='No matches.'}}
+var CW=[['Define','State exactly what a term means.','<b>Do:</b> Give a short, precise meaning. <b>Start:</b> “X is…”. Add a quick example if marks allow.'],['Explain','Show how or why something happens.','<b>Do:</b> Build a chain of cause and effect. <b>Start:</b> “This happens because… which leads to…”'],['Analyse','Break it down and examine the links.','<b>Do:</b> Look at causes, effects and relationships in detail, using evidence. <b>Start:</b> “One factor is… this matters because…”'],['Evaluate','Judge how important or effective it is.','<b>Do:</b> Weigh both sides and reach a justified conclusion. <b>Start:</b> “However…”, “Overall…”, “It depends on…”']];
+var cw=$('cw');CW.forEach(function(x){var b=el('button','fc'),i=el('div','fi'),f=el('div','ff'),k=el('div','fb');f.appendChild(el('b','',x[0]));f.appendChild(el('span','',x[1]+' (tap to flip)'));k.innerHTML=x[2];i.appendChild(f);i.appendChild(k);b.appendChild(i);b.onclick=function(){b.classList.toggle('fl')};cw.appendChild(b)});
+
+var M=[{q:'Explain how a rise in the RBA cash rate could reduce inflation. (6 marks)',t:'Cash rate',s:[['Point','Answer the question straight away in one clear sentence. Examiners reward a direct opening.','A rise in the cash rate can reduce inflation by lowering total spending in the economy.'],['Evidence','Back the point with a real fact, figure or example. Specific beats vague.','Between May 2022 and November 2023, the RBA lifted the cash rate from 0.10% to 4.35%, and variable mortgage rates followed.'],['Explain','Show the chain of reasoning: A leads to B leads to C. This is where most marks are won.','Higher repayments leave borrowers with less to spend, and saving becomes more attractive, so households cut back. With weaker demand, businesses find it harder to raise prices, which slows inflation.'],['Link','Tie back to the question and add a limit or judgement for top marks.','Therefore, higher rates act as a brake on demand-driven inflation, although the effect takes time and cannot fix price rises caused by supply shocks.']]},
+{q:'Explain one way inflation can hurt households. (4 marks)',t:'Inflation',s:[['Point','Open with the effect you are explaining, named clearly.','Inflation can hurt households by reducing the real value of their savings.'],['Evidence','Use a number to make it concrete.','For example, if prices rise 4% a year and a savings account pays 2%, each dollar buys about 2% less after a year.'],['Explain','Link each step: what changes, then why it matters.','Because prices grow faster than the interest earned, the same balance buys fewer goods, so households must save more or spend less to keep their lifestyle.'],['Link','Finish by tying back to the question, with a limit if you can.','Therefore inflation erodes savings, although the damage is smaller if interest rates rise to match it.']]}];
+var ans=$('ans'),note=$('segnote'),mt=$('mt'),mq=$('mq');
+function showM(n){mq.textContent=M[n].q;ans.innerHTML='';note.textContent='Tap a sentence above.';Array.prototype.forEach.call(mt.children,function(b,k){b.classList.toggle('on',k===n)});
+M[n].s.forEach(function(x,i){var s=el('span','seg s'+i,x[2]+' ');s.onclick=function(){Array.prototype.forEach.call(ans.children,function(c){c.classList.remove('on')});s.classList.add('on');note.innerHTML='';note.appendChild(el('b','',x[0]+': '));note.appendChild(document.createTextNode(x[1]))};ans.appendChild(s);ans.appendChild(document.createTextNode(' '))})}
+M.forEach(function(m,n){var b=el('button','mb',m.t);b.onclick=function(){showM(n)};mt.appendChild(b)});showM(0);
+var PQ=['Explain why a rise in demand for concert tickets can raise their price.','Explain why the RBA might raise the cash rate when inflation is high.','Explain what is meant by opportunity cost, using an example.'],pi=0,pqe=document.querySelector('.try .q b');
+var nb=el('button','btn','Try a different question');nb.style.marginTop='12px';nb.onclick=function(){pi=(pi+1)%PQ.length;pqe.textContent=PQ[pi];var t=$('ta');t.value='';chk()};pqe.parentNode.parentNode.appendChild(nb);
+
+var ta=$('ta');function chk(){var t=ta.value,l=t.toLowerCase(),n=(t.trim().match(/\S+/g)||[]).length;$('wc').textContent=n+' words';
+var m={c1:/\b(because|therefore|as a result|which means|which leads|leads to|so that|since|causes?)\b/,c2:/(\d|for example|for instance|such as|e\.g\.)/,c3:/\b(however|although|whereas|but|on the other hand|limit|depends|unless)\b/};
+Object.keys(m).forEach(function(k){$(k).classList.toggle('ok',m[k].test(l))});$('c4').classList.toggle('ok',n>=60)}
+ta.addEventListener('input',chk);
+
+var G=[['Cash rate','The interest rate on overnight loans between banks. The RBA sets a target for it.'],['Inflation','The general rise in prices over time, reducing what each dollar can buy.'],['CPI','Consumer Price Index: a measure of price changes for a typical basket of household goods.'],['Interest rate','The cost of borrowing money, or the return on saving it, as a yearly percentage.'],['Opportunity cost','The value of the next best option you give up when you choose.'],['Scarcity','Limited resources versus unlimited wants, which forces choices.'],['Supply','How much of something is available at a given price.'],['Demand','How much of something people want at a given price.'],['GDP','The total value of goods and services a country produces in a period.'],['Recession','A significant, widespread fall in economic activity.'],['Unemployment rate','The share of people in the labour force who want work but don’t have a job.'],['Compound interest','Interest earned on both your original money and past interest.'],['Monetary policy','Central bank actions, mainly interest rates, to influence spending and inflation.'],['Fiscal policy','Government spending and tax decisions that influence the economy.'],['Exchange rate','The price of one currency in terms of another, like AUD to USD.'],['Real vs nominal','Nominal values ignore inflation. Real values adjust for it.']].sort(function(a,b){return a[0]<b[0]?-1:1});
+var gl=$('gl');function rg(f){gl.innerHTML='';var n=0;G.forEach(function(g){if((g[0]+' '+g[1]).toLowerCase().indexOf(f)<0)return;n++;gl.appendChild(el('dt','',g[0]));gl.appendChild(el('dd','',g[1]))});if(!n)gl.textContent='No matches.'}
 rg('');$('gs').addEventListener('input',function(e){rg(e.target.value.toLowerCase().trim())});
+Array.prototype.forEach.call(document.querySelectorAll('.side a'),function(a){a.onclick=function(){$('gs').value=a.dataset.t;rg(a.dataset.t.toLowerCase());$('dictionary').scrollIntoView({behavior:'smooth'})}});
 
+function count(v){var t0=null,e=$('hr');function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1);e.textContent=(v*(1-Math.pow(1-p,3))).toFixed(2)+'%';if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+
+var pg=$('pg');addEventListener('scroll',function(){var d=document.documentElement;pg.style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+function cc(){var a=+$('rA').value,i=+$('rI').value,y=+$('rY').value,v=a/Math.pow(1+i/100,y);$('vA').textContent='$'+a;$('vI').textContent=i+'%';$('vY').textContent=y;$('yy').textContent=y;$('aa').textContent='$'+a;$('out').textContent='$'+v.toFixed(0);$('bar').style.width=(v/a*100)+'%';$('cn').textContent='You lose about '+Math.round((1-v/a)*100)+'% of its buying power.'}
+['rA','rI','rY'].forEach(function(k){$(k).addEventListener('input',cc)});cc();
+document.addEventListener('keydown',function(e){if(/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+
+var MP=[['Budgeting','A budget is a plan for your money, so you decide where it goes before it disappears.',['Track a month of spending','Cover needs first, then savings, then wants','Review it monthly and adjust']],
+['Saving','Pay yourself first: move savings out as soon as you are paid.',['Build an emergency fund of a few months of essentials','Use a separate account so it is not tempting','Automate transfers']],
+['Super','Superannuation is retirement money your employer pays on top of your wages. Time in the market does the heavy lifting.',['Check you have one fund, not several','Look at fees and performance','Keep your details up to date']],
+['Debt and credit','Borrowing costs interest. Credit cards are very expensive if you carry a balance.',['Pay the full balance each month if you can','Pay the highest interest debt first','Buy now, pay later is still debt']],
+['Investing','Investing means buying assets such as shares, funds or property to grow wealth over the long term. Returns are not guaranteed and values can fall.',['Understand your goals and time horizon','Diversify across assets','Keep fees low and avoid chasing hot tips']],
+['Renting and buying','Housing is usually the biggest cost. Compare the full costs of renting and buying, not just the repayment.',['Include deposit, stamp duty, rates and maintenance','Test whether you could afford a higher interest rate','Read any lease or contract before you sign']],
+['Insurance','Insurance moves large, unlikely costs to a provider in exchange for a regular premium.',['Insure what you could not afford to replace','Compare cover, excess and exclusions, not only price','Review policies each year']],
+['Scams','Scammers rush you. Slow down, verify, and never share codes or passwords.',['Hang up and call the official number yourself','Be wary of guaranteed returns','Report scams at scamwatch.gov.au']]];
+var mtabs=$('mtabs'),mp=$('mp');function sm(i){mp.innerHTML='';mp.style.animation='none';void mp.offsetWidth;mp.style.animation='';mp.appendChild(el('h3','',MP[i][0]));mp.appendChild(el('p','',MP[i][1]));var u=el('ul');MP[i][2].forEach(function(t){u.appendChild(el('li','',t))});mp.appendChild(u);Array.prototype.forEach.call(mtabs.children,function(b,k){b.classList.toggle('on',k===i)})}
+MP.forEach(function(m,i){var b=el('button','',m[0]);b.onclick=function(){sm(i)};mtabs.appendChild(b)});sm(0);
+function bd(){var v=Math.max(0,+$('inc').value||0),f=function(x){return '$'+Math.round(x).toLocaleString()};$('bn').textContent=f(v*.5);$('bw').textContent=f(v*.3);$('bsv').textContent=f(v*.2)}$('inc').addEventListener('input',bd);bd();
+var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io2.unobserve(e.target);var t=e.target,v=+t.dataset.v,d=+t.dataset.d,p=t.dataset.p||'',s=t.dataset.s||'',t0=null;(function f(n){if(!t0)t0=n;var q=Math.min((n-t0)/1400,1),x=v*(1-Math.pow(1-q,3));t.textContent=p+(d?x.toFixed(d):Math.round(x).toLocaleString())+s;if(q<1)requestAnimationFrame(f)})(performance.now())})},{threshold:.5});
+Array.prototype.forEach.call(document.querySelectorAll('.cn'),function(n){io2.observe(n)});
+
+/* models */
+var NS='http://www.w3.org/2000/svg',msv=$('msvg'),mex=$('mex'),mctl=$('mctl'),mdt=$('mdt'),mode=0;
+function S_(t,a,x){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(x)e.textContent=x;return e}
+var X=function(q){return 50+q*3.2},Y=function(p){return 250-p*2.3};
+var st={d:90,s:10},pp=50;
+function eq(a,c){var q=(a-c)/1.6;return[q,a-.8*q]}
+function seg(a,c,dem){var q1,q2;if(dem){q1=Math.max(0,(a-100)/.8);q2=Math.min(100,a/.8)}else{q1=Math.max(0,-c/.8);q2=Math.min(100,(100-c)/.8)}var f=function(q){return dem?a-.8*q:c+.8*q};return[X(q1),Y(f(q1)),X(q2),Y(f(q2))]}
+function axes(ya,xa){msv.innerHTML='';msv.appendChild(S_('path',{d:'M50 20V250H370','class':'ax2'}));msv.appendChild(S_('text',{x:8,y:30,'class':'lb'},ya||'Price'));msv.appendChild(S_('text',{x:330,y:272,'class':'lb'},xa||'Quantity'))}
+function line(a,c,dem,ghost,lab){var s=seg(a,c,dem);msv.appendChild(S_('line',ghost?{x1:s[0],y1:s[1],x2:s[2],y2:s[3],'class':'gh'}:{x1:s[0],y1:s[1],x2:s[2],y2:s[3],stroke:dem?'#1769c2':'#c8102e','stroke-width':3,'stroke-linecap':'round'}));if(lab)msv.appendChild(S_('text',{x:s[2]+4,y:s[3]+(dem?14:-4),'class':'lb'},lab))}
+function dot(e,ghost){var x=X(e[0]),y=Y(e[1]);if(!ghost){msv.appendChild(S_('line',{x1:x,y1:y,x2:x,y2:250,'class':'gh'}));msv.appendChild(S_('line',{x1:50,y1:y,x2:x,y2:y,'class':'gh'}))}msv.appendChild(S_('circle',{cx:x,cy:y,r:ghost?4:6,fill:ghost?'var(--mu)':'#111'}))}
+function sd(msg){axes();var o=eq(90,10),n=eq(st.d,st.s);if(st.d!==90)line(90,0,true,true);if(st.s!==10)line(0,10,false,true);if(st.d!==90||st.s!==10)dot(o,true);line(st.d,0,true,false,st.d!==90?'D1':'D');line(0,st.s,false,false,st.s!==10?'S1':'S');dot(n,false);
+mex.innerHTML='';var b=el('b','','Equilibrium: price $'+n[1].toFixed(0)+', quantity '+n[0].toFixed(0)+'. ');mex.appendChild(b);mex.appendChild(document.createTextNode(msg||'Where supply meets demand, the market clears. Use the buttons to shift a curve.'));}
+function pc(){axes('Good B','Good A');var pts=[];for(var x=0;x<=100;x+=2)pts.push(X(x)+','+Y(Math.sqrt(10000-x*x)));msv.appendChild(S_('polyline',{points:pts.join(' '),fill:'none',stroke:'#c8102e','stroke-width':3}));
+var y=Math.sqrt(10000-pp*pp),y2=Math.sqrt(10000-Math.min(100,pp+10)*Math.min(100,pp+10));msv.appendChild(S_('line',{x1:X(pp),y1:Y(y),x2:X(pp),y2:250,'class':'gh'}));msv.appendChild(S_('line',{x1:50,y1:Y(y),x2:X(pp),y2:Y(y),'class':'gh'}));msv.appendChild(S_('circle',{cx:X(pp),cy:Y(y),r:7,fill:'#111'}));
+mex.innerHTML='';mex.appendChild(el('b','','Producing '+pp+' of Good A means '+y.toFixed(0)+' of Good B. '));mex.appendChild(document.createTextNode(pp<100?'Making 10 more of A costs '+(y-y2).toFixed(0)+' of B. The curve bows outward, so the opportunity cost rises as you specialise.':'All resources are used for Good A.'))}
+function ctl(){mctl.innerHTML='';if(mode===0){[['Demand increases',function(){st.d=Math.min(130,st.d+15)},'Demand shifts right. More is wanted at every price, so equilibrium price and quantity both rise.'],['Demand decreases',function(){st.d=Math.max(50,st.d-15)},'Demand shifts left. Less is wanted at every price, so equilibrium price and quantity both fall.'],['Supply increases',function(){st.s=Math.max(-10,st.s-15)},'Supply shifts right. More is offered at every price, so price falls and quantity rises.'],['Supply decreases',function(){st.s=Math.min(40,st.s+15)},'Supply shifts left. Less is offered at every price, so price rises and quantity falls.'],['Reset',function(){st.d=90;st.s=10},'Back to the starting market.']].forEach(function(a){var b=el('button','',a[0]);b.onclick=function(){a[1]();sd(a[2])};mctl.appendChild(b)});sd()}else{var l=el('label','u','Good A produced: ');l.style.font='700 14px Inter,sans-serif';var r=document.createElement('input');r.type='range';r.min=0;r.max=100;r.value=pp;r.setAttribute('aria-label','Good A produced');r.style.accentColor='#c8102e';r.oninput=function(){pp=+r.value;pc()};mctl.appendChild(l);mctl.appendChild(r);pc()}}
+['Supply and demand','Production possibilities'].forEach(function(t,i){var b=el('button','',t);b.onclick=function(){mode=i;Array.prototype.forEach.call(mdt.children,function(c,k){c.classList.toggle('on',k===i)});ctl()};mdt.appendChild(b)});mdt.children[0].classList.add('on');ctl();
+/* sketch pad */
+var cv=$('pad'),cx=cv.getContext('2d'),dn=false;function grid(){var ln=getComputedStyle(document.documentElement).getPropertyValue('--ln')||'#ddd',tx=getComputedStyle(document.body).color;cx.clearRect(0,0,800,450);cx.strokeStyle=ln;cx.lineWidth=1;for(var i=0;i<=800;i+=50){cx.beginPath();cx.moveTo(i,0);cx.lineTo(i,450);cx.stroke()}for(var j=0;j<=450;j+=50){cx.beginPath();cx.moveTo(0,j);cx.lineTo(800,j);cx.stroke()}cx.strokeStyle=tx;cx.lineWidth=3;cx.beginPath();cx.moveTo(60,20);cx.lineTo(60,410);cx.lineTo(770,410);cx.stroke();cx.fillStyle=tx;cx.font='bold 18px Inter,sans-serif';cx.fillText('P',30,40);cx.fillText('Q',752,436)}
+grid();cx.lineCap='round';
+function pt(e){var r=cv.getBoundingClientRect();return[(e.clientX-r.left)*800/r.width,(e.clientY-r.top)*450/r.height]}
+cv.addEventListener('pointerdown',function(e){dn=true;var q=pt(e);cx.strokeStyle='#c8102e';cx.lineWidth=3;cx.beginPath();cx.moveTo(q[0],q[1]);cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',function(e){if(!dn)return;var q=pt(e);cx.lineTo(q[0],q[1]);cx.stroke()});
+['pointerup','pointercancel'].forEach(function(n){cv.addEventListener(n,function(){dn=false})});$('clr').onclick=grid;
+/* practice questions */
+var Q=[{t:'Define (2)',q:'Define the term “opportunity cost”. (2 marks)',m:'Opportunity cost is the value of the next best alternative that is given up when a choice is made. For example, spending an hour studying means giving up an hour of paid work.',p:['States that it is the next best alternative forgone','Gives a relevant example']},
+{t:'Explain (4)',q:'Explain how a rise in the cash rate can affect household spending. (4 marks)',m:'A higher cash rate usually leads banks to raise variable mortgage and loan rates. Borrowers face higher repayments, which reduces the income they have left to spend. Saving also becomes more attractive because deposit rates rise, so households cut spending. Overall consumer spending falls.',p:['Links the cash rate to bank lending rates','Explains higher repayments reduce disposable income','Notes saving becomes more attractive','Concludes spending falls']},
+{t:'Diagram (4)',q:'Using a supply and demand diagram, explain the effect of a fall in supply on the price of a good. (4 marks)',m:'A fall in supply shifts the supply curve left (S to S1). At the original price there is now a shortage, because quantity demanded exceeds quantity supplied. Competition among buyers pushes the price up until a new equilibrium is reached at a higher price and lower quantity.',p:['Draws or describes a leftward shift of supply','Identifies the shortage at the old price','Explains price rising to a new equilibrium','States higher price and lower quantity']},
+{t:'Distinguish (3)',q:'Distinguish between a budget deficit and a budget surplus. (3 marks)',m:'A budget deficit occurs when government spending is greater than government revenue in a period, so it must borrow. A budget surplus occurs when revenue exceeds spending, leaving money to repay debt or save.',p:['Defines deficit correctly','Defines surplus correctly','Shows the contrast between them']},
+{t:'Analyse (6)',q:'Analyse why inflation might rise above the RBA’s target range. (6 marks)',m:'Inflation can rise when total demand grows faster than the economy can supply, for example when strong spending and low unemployment push firms to raise prices. It can also rise from higher costs, such as wages, energy or imported goods, which firms pass on to consumers. If people expect higher inflation, workers ask for higher wages and firms raise prices in advance, which keeps inflation high. These causes can reinforce each other, which is why the RBA monitors both demand and costs.',p:['Identifies demand-pull as one cause','Identifies cost-push as another cause','Explains how each leads to higher prices','Mentions expectations or wage-price effects','Links the causes together','Uses economic terms accurately']},
+{t:'Evaluate (8)',q:'Evaluate the effectiveness of raising interest rates to reduce inflation. (8 marks)',m:'Raising interest rates can be effective because it increases borrowing costs, reduces spending and eases demand-driven inflation. Higher rates also make saving more attractive and can strengthen the dollar, lowering import prices. However, the effect works with a lag, so inflation may stay high for a time. It is less effective against supply-side inflation, such as from global shocks, and it can hurt borrowers and raise unemployment. Overall, higher rates are effective for demand-driven inflation but are a blunt tool for cost-driven inflation, so their success depends on the cause of the price rises.',p:['Explains how rates reduce spending and demand','Gives at least one further mechanism','Identifies a limit (time lag)','Identifies a limit (supply shocks) or a cost (borrowers, jobs)','Weighs strengths and limits','Reaches a justified judgement']}];
+var qt=$('qt'),qi=0;function sq(i){qi=i;Array.prototype.forEach.call(qt.children,function(b,k){b.classList.toggle('on',k===i)});$('qq').textContent=Q[i].q;$('qans').value='';$('qout').innerHTML=''}
+Q.forEach(function(x,i){var b=el('button','',x.t);b.onclick=function(){sq(i)};qt.appendChild(b)});sq(0);
+$('qshow').onclick=function(){var o=$('qout'),x=Q[qi];o.innerHTML='';var m=el('div','sm');m.appendChild(el('b','','Model answer'));m.appendChild(el('p','',x.m));o.appendChild(m);var k=el('div','sm mk');k.appendChild(el('b','','Tick the points you covered'));var r=el('p','','0 of '+x.p.length+' points');r.style.fontWeight='700';x.p.forEach(function(t){var l=el('label'),c=document.createElement('input');c.type='checkbox';c.onchange=function(){r.textContent=k.querySelectorAll('input:checked').length+' of '+x.p.length+' points'};l.appendChild(c);l.appendChild(el('span','',t));k.appendChild(l)});k.appendChild(r);o.appendChild(k)};
+/* news literacy */
+var NW=[['Read the headline','Headlines are written to attract attention, not to give the whole story.',['Read past the headline before sharing','Ask what is claimed, by whom, and with what evidence','Notice emotional words that push a reaction']],
+['Check the source','Who published it, and why? Reliable sources show who wrote it, when, and where the information came from.',['Look for the author, date and original source','Prefer primary sources, such as the RBA, ABS or the legislation itself','Check whether other reputable outlets report the same facts']],
+['Numbers and polls','A statistic needs context. Compare like with like, and check the base, the time period and the margin of error.',['Is it a percentage or a raw number?','How many were surveyed, and how were they chosen?','Was it a change over time, and from what starting point?']],
+['How government works','Australia has three levels: federal, state and local. They share responsibilities, such as defence federally, hospitals and schools mainly by states, and roads and rubbish locally.',['The federal budget sets taxing and spending plans','The RBA sets the cash rate and acts independently of the government','Laws are made by Parliament, so follow what is actually proposed']],
+['Fact, opinion, spin','Facts can be checked. Opinions are judgements. Spin presents facts selectively to favour a view.',['Ask what has been left out','Compare how different outlets cover the same event','Separate the evidence from the interpretation']],
+['Read more than one view','Understanding a debate means knowing the strongest arguments on each side, not only the ones you agree with.',['Read reasoning from people who disagree','Explain the other side’s case in your own words','Change your mind when the evidence changes']]];
+var nt=$('nt'),nm=$('nm');function sn(i){nm.innerHTML='';nm.style.animation='none';void nm.offsetWidth;nm.style.animation='';nm.appendChild(el('h3','',NW[i][0]));nm.appendChild(el('p','',NW[i][1]));var u=el('ul');NW[i][2].forEach(function(t){u.appendChild(el('li','',t))});nm.appendChild(u);Array.prototype.forEach.call(nt.children,function(b,k){b.classList.toggle('on',k===i)})}
+NW.forEach(function(m,i){var b=el('button','',m[0]);b.onclick=function(){sn(i)};nt.appendChild(b)});sn(0);
+var FO=[['The RBA lifted the cash rate to 4.85% on 3 November 2026.','Fact'],['The RBA should have waited before raising rates.','Opinion'],['Inflation is the general rise in prices over time.','Fact'],['Households will be better off next year.','Prediction'],['This is the best budget in a generation.','Opinion']],fo=$('fo');
+FO.forEach(function(x){var d=el('div','chk');d.appendChild(el('b','',x[0]));var fb=el('p','why');['Fact','Opinion','Prediction'].forEach(function(o){var b=el('button','opt',o);b.style.display='inline-block';b.style.width='auto';b.style.marginRight='8px';b.onclick=function(){if(d.dataset.d)return;d.dataset.d=1;b.classList.add(o===x[1]?'r':'x');fb.textContent=o===x[1]?'Correct.':'The answer is '+x[1].toLowerCase()+'.'};d.appendChild(b)});d.appendChild(fb);fo.appendChild(d)});
+count(4.85);
 fetch('data/cash-rate.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
-var P=j.points;if(!P||P.length<2)throw 0;
-var W=700,H=300,m=40,mn=0,mx=Math.max.apply(null,P.map(function(p){return p.v}))*1.1;
-var n=P.length,pts=P.map(function(p,i){return (m+i*(W-2*m)/(n-1)).toFixed(1)+','+(H-m-(p.v-mn)/(mx-mn)*(H-2*m)).toFixed(1)}).join(' ');
+var P=j.points;if(!P||P.length<2)throw 0;var last=P[P.length-1];count(last.v);$('hd').textContent='Month of '+last.d+' · RBA data';
+var W=700,H=300,m=40,mx=Math.max.apply(null,P.map(function(p){return p.v}))*1.1,n=P.length;
+var pts=P.map(function(p,i){return (m+i*(W-2*m)/(n-1)).toFixed(1)+','+(H-m-p.v/mx*(H-2*m)).toFixed(1)}).join(' ');
 var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="RBA cash rate over time"><line x1="'+m+'" y1="'+(H-m)+'" x2="'+(W-m)+'" y2="'+(H-m)+'" stroke="currentColor" opacity=".3"/>';
-[0,Math.round(mx/2),Math.round(mx)].forEach(function(v){var y=H-m-(v-mn)/(mx-mn)*(H-2*m);s+='<text class="ax" x="4" y="'+(y+4)+'">'+v+'%</text>'});
-s+='<text class="ax" x="'+m+'" y="'+(H-12)+'">'+P[0].d.slice(0,4)+'</text><text class="ax" x="'+(W-m)+'" y="'+(H-12)+'" text-anchor="end">'+P[n-1].d.slice(0,4)+'</text>';
-s+='<polyline fill="none" stroke="var(--ac)" stroke-width="2.5" points="'+pts+'"/></svg>';
-$('chart').innerHTML=s;$('dnote').textContent='Latest in data file: '+P[n-1].v+'% ('+P[n-1].d+'). Updated '+j.updated+'. Source: RBA Statistical Table F1.1.';
-}).catch(function(){$('chart').innerHTML='<p class="note">Chart appears once the data file has been generated (see setup steps).</p>'});
+[0,Math.round(mx/2),Math.round(mx)].forEach(function(v){s+='<text class="ax" x="4" y="'+(H-m-v/mx*(H-2*m)+4)+'">'+v+'%</text>'});
+s+='<text class="ax" x="'+m+'" y="'+(H-12)+'">'+P[0].d.slice(0,4)+'</text><text class="ax" x="'+(W-m)+'" y="'+(H-12)+'" text-anchor="end">'+last.d.slice(0,4)+'</text>';
+s+='<polyline pathLength="1" fill="none" stroke="var(--ac)" stroke-width="2.5" stroke-linejoin="round" points="'+pts+'"/></svg>';
+var c=$('chart');c.className='dr';c.innerHTML=s;io.observe(c);$('dnote').textContent='Latest in data file: '+last.v+'% ('+last.d+'). Updated '+j.updated+'. Source: RBA Statistical Table F1.1.';
+}).catch(function(){$('chart').innerHTML='<p class="note">The chart appears once the data file has been generated.</p>'});
 })();
 </script>
 </body>
