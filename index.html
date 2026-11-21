@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Econ Basics: Learn Economics with Australian Data</title>
+<meta name="description" content="Plain-English economics lessons, a searchable glossary, and live RBA cash rate data for Australian learners.">
+<style>
+:root{--bg:#faf8f3;--sf:#fff;--tx:#1d2433;--mu:#5b6475;--ac:#1f6f5c;--ai:#fff;--ln:#e3dfd3;--ok:#1f7a45;--bad:#b3392f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12161d;--sf:#1b212b;--tx:#eceff4;--mu:#a3adbd;--ac:#4cc3a4;--ai:#0c1a16;--ln:#2c3441;--ok:#5fd08a;--bad:#ff8a80}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12161d;--sf:#1b212b;--tx:#eceff4;--mu:#a3adbd;--ac:#4cc3a4;--ai:#0c1a16;--ln:#2c3441;--ok:#5fd08a;--bad:#ff8a80}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,nav,button,input,.t{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:900px;margin:0 auto;padding:0 20px}
+nav{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;font-size:15px;border-bottom:1px solid var(--ln)}
+nav strong{margin-right:auto;font-size:18px}nav a{color:var(--mu);text-decoration:none}nav a:hover{color:var(--ac)}
+.hero{padding:56px 0 36px}.hero h1{font-size:clamp(32px,6vw,50px);line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
+.hero p{font-size:19px;color:var(--mu);max-width:600px;margin:0}
+section{padding:40px 0;border-top:1px solid var(--ln)}h2{font-size:28px;margin:0 0 6px}.sub{color:var(--mu);margin:0 0 20px}
+.box{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:20px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab,.opt{border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:999px;padding:8px 14px;font-size:15px;cursor:pointer}
+.tab.on{background:var(--ac);color:var(--ai);border-color:var(--ac)}
+.opt{display:block;width:100%;text-align:left;border-radius:8px;margin-bottom:8px;font-size:16px}.opt:hover{border-color:var(--ac)}
+.opt.r{border-color:var(--ok);color:var(--ok)}.opt.x{border-color:var(--bad);color:var(--bad)}
+.lesson h3{margin:0 0 8px;font-size:22px}.lesson p{margin:0 0 12px}
+.chk{border-top:1px dashed var(--ln);margin-top:16px;padding-top:14px}.chk b{font-family:system-ui,sans-serif}
+.why{color:var(--mu);font-size:15px;margin:6px 0 0}
+.hint{background:none;border:0;color:var(--ac);cursor:pointer;padding:0;font-size:15px}
+input[type=search]{width:100%;font-size:17px;padding:11px 14px;border-radius:10px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);margin-bottom:14px}
+dl{margin:0}dt{font-weight:700;font-family:system-ui,sans-serif;margin-top:14px}dd{margin:2px 0 0;color:var(--mu)}
+svg{width:100%;height:auto;display:block}.ax{fill:var(--mu);font:12px system-ui,sans-serif}
+.tbl{width:100%;border-collapse:collapse;font:15px system-ui,sans-serif;margin-top:14px}.tbl td,.tbl th{padding:8px;border-bottom:1px solid var(--ln);text-align:left}
+.note{font-size:14px;color:var(--mu);margin-top:10px}a{color:var(--ac)}
+footer{padding:28px 0 40px;color:var(--mu);font-size:14px;border-top:1px solid var(--ln)}
+</style>
+</head>
+<body>
+<div class="w">
+<nav><strong>📈 Econ Basics</strong><a href="#learn">Lessons</a><a href="#glossary">Glossary</a><a href="#data">RBA data</a></nav>
+<div class="hero"><h1>Learn economics. See it in real Australian data.</h1><p>Short lessons with check questions, a plain-English glossary, and the RBA’s cash rate history, all in one place.</p></div>
+
+<section id="learn"><h2>Lessons</h2><p class="sub">Read, then answer the check question. Use the hint if you’re stuck.</p>
+<div class="tabs" id="tabs"></div><div class="box lesson" id="lesson"></div></section>
+
+<section id="glossary"><h2>Glossary</h2><p class="sub">Search any term.</p>
+<input type="search" id="gs" placeholder="Search terms, e.g. inflation" aria-label="Search glossary"><dl id="gl"></dl></section>
+
+<section id="data"><h2>RBA cash rate</h2>
+<p class="sub">The cash rate target is the interest rate the RBA sets. It influences loan rates, savings rates, and inflation.</p>
+<div class="box"><div id="chart"></div><div class="note" id="dnote"></div>
+<table class="tbl"><thead><tr><th>Effective</th><th>Change</th><th>Cash rate</th></tr></thead><tbody>
+<tr><td>30 Sep 2026</td><td>+0.25</td><td>4.60%</td></tr>
+<tr><td>12 Aug 2026</td><td>0.00</td><td>4.35%</td></tr>
+<tr><td>17 Jun 2026</td><td>0.00</td><td>4.35%</td></tr></tbody></table>
+<p class="note">Table shows recent decisions as listed on <a href="https://www.rba.gov.au/statistics/cash-rate/">rba.gov.au/statistics/cash-rate</a> when this page was built. Always check the RBA for the latest figure.</p></div></section>
+</div>
+<footer><div class="w">General education only, not financial advice. Data source: Reserve Bank of Australia.</div></footer>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var L=[
+{t:'Inflation',p:['Inflation is the general rise in prices over time. If inflation is 3%, something that cost $100 last year costs about $103 now.','It matters because your money buys less unless your wages and savings keep up. Central banks like the RBA aim to keep inflation low and stable, around 2 to 3% in Australia.'],q:'Prices rise 4% a year and your savings earn 2%. Your buying power…',o:['Grows','Shrinks','Stays the same'],a:1,h:'Compare the two rates. Which is bigger?',w:'Prices outpace your savings, so each dollar buys less.'},
+{t:'Interest rates',p:['An interest rate is the price of borrowing money, and the reward for saving it. The RBA’s cash rate target is the benchmark that banks’ loan and savings rates follow.','When the RBA raises the cash rate, borrowing gets more expensive and people spend less, which cools inflation. When it cuts, borrowing gets cheaper and spending tends to rise.'],q:'The RBA raises the cash rate. What usually happens to variable mortgage rates?',o:['They tend to rise','They tend to fall','Nothing'],a:0,h:'Banks pass on higher funding costs.',w:'Variable loan rates generally follow the cash rate up.'},
+{t:'Supply and demand',p:['Demand is how much people want something at a given price. Supply is how much is available. Prices settle where the two meet.','If more people want something and supply can’t keep up, the price rises. If supply jumps or interest fades, the price falls.'],q:'A venue has fixed seats and demand for tickets jumps. Prices tend to…',o:['Fall','Rise','Stay the same'],a:1,h:'Supply is fixed here.',w:'More demand with the same supply pushes prices up.'},
+{t:'Opportunity cost',p:['Every choice means giving something up. The opportunity cost is the value of the next best thing you didn’t choose.','It applies to time as well as money: an hour spent studying is an hour not spent working or resting.'],q:'You spend $50 on a game instead of dinner. The dinner is your…',o:['Sunk cost','Opportunity cost','Tax'],a:1,h:'It’s the best alternative you gave up.',w:'Opportunity cost is the next best alternative forgone.'}];
+var tabs=$('tabs'),box=$('lesson');
+function show(i){
+Array.prototype.forEach.call(tabs.children,function(b,j){b.classList.toggle('on',i===j)});
+var x=L[i];box.innerHTML='';
+var h=document.createElement('h3');h.textContent=x.t;box.appendChild(h);
+x.p.forEach(function(s){var p=document.createElement('p');p.textContent=s;box.appendChild(p)});
+var c=document.createElement('div');c.className='chk';
+var q=document.createElement('p');q.innerHTML='<b></b>';q.firstChild.textContent='Check: '+x.q;c.appendChild(q);
+var hb=document.createElement('button');hb.className='hint';hb.textContent='Need a hint?';
+var hp=document.createElement('p');hp.className='why';hb.onclick=function(){hp.textContent=x.h};
+var done=false,why=document.createElement('p');why.className='why';
+x.o.forEach(function(t,k){var b=document.createElement('button');b.className='opt';b.textContent=t;
+b.onclick=function(){if(done)return;done=true;var ks=c.querySelectorAll('.opt');
+if(k===x.a)b.classList.add('r');else{b.classList.add('x');ks[x.a].classList.add('r')}why.textContent=x.w};c.appendChild(b)});
+c.appendChild(hb);c.appendChild(hp);c.appendChild(why);box.appendChild(c)}
+L.forEach(function(x,i){var b=document.createElement('button');b.className='tab';b.textContent=x.t;b.onclick=function(){show(i)};tabs.appendChild(b)});show(0);
+
+var G=[['Cash rate','The interest rate on overnight loans between banks. The RBA sets a target for it.'],['Inflation','The general rise in prices over time, reducing what each dollar can buy.'],['CPI (Consumer Price Index)','A measure of price changes for a typical basket of household goods and services.'],['Interest rate','The cost of borrowing money, or the return on saving it, as a percentage per year.'],['Opportunity cost','The value of the next best option you give up when you make a choice.'],['Scarcity','Limited resources versus unlimited wants, which forces choices.'],['Supply','How much of a good or service is available at a given price.'],['Demand','How much of a good or service people want at a given price.'],['GDP','The total value of goods and services produced in a country over a period.'],['Recession','A significant, widespread fall in economic activity, often seen as two quarters of falling GDP.'],['Unemployment rate','The share of people in the labour force who are looking for work but don’t have a job.'],['Compound interest','Interest earned on both your original money and previously earned interest.'],['Monetary policy','Central bank actions, mainly interest rates, to influence spending and inflation.'],['Fiscal policy','Government decisions on spending and taxation to influence the economy.'],['Exchange rate','The price of one currency in terms of another, such as AUD to USD.'],['Real vs nominal','Nominal values ignore inflation. Real values adjust for it.']];
+var gl=$('gl');function rg(f){gl.innerHTML='';G.filter(function(g){return (g[0]+' '+g[1]).toLowerCase().indexOf(f)>-1}).forEach(function(g){var a=document.createElement('dt');a.textContent=g[0];var b=document.createElement('dd');b.textContent=g[1];gl.appendChild(a);gl.appendChild(b)});if(!gl.children.length){gl.textContent='No matches.'}}
+rg('');$('gs').addEventListener('input',function(e){rg(e.target.value.toLowerCase().trim())});
+
+fetch('data/cash-rate.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+var P=j.points;if(!P||P.length<2)throw 0;
+var W=700,H=300,m=40,mn=0,mx=Math.max.apply(null,P.map(function(p){return p.v}))*1.1;
+var n=P.length,pts=P.map(function(p,i){return (m+i*(W-2*m)/(n-1)).toFixed(1)+','+(H-m-(p.v-mn)/(mx-mn)*(H-2*m)).toFixed(1)}).join(' ');
+var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="RBA cash rate over time"><line x1="'+m+'" y1="'+(H-m)+'" x2="'+(W-m)+'" y2="'+(H-m)+'" stroke="currentColor" opacity=".3"/>';
+[0,Math.round(mx/2),Math.round(mx)].forEach(function(v){var y=H-m-(v-mn)/(mx-mn)*(H-2*m);s+='<text class="ax" x="4" y="'+(y+4)+'">'+v+'%</text>'});
+s+='<text class="ax" x="'+m+'" y="'+(H-12)+'">'+P[0].d.slice(0,4)+'</text><text class="ax" x="'+(W-m)+'" y="'+(H-12)+'" text-anchor="end">'+P[n-1].d.slice(0,4)+'</text>';
+s+='<polyline fill="none" stroke="var(--ac)" stroke-width="2.5" points="'+pts+'"/></svg>';
+$('chart').innerHTML=s;$('dnote').textContent='Latest in data file: '+P[n-1].v+'% ('+P[n-1].d+'). Updated '+j.updated+'. Source: RBA Statistical Table F1.1.';
+}).catch(function(){$('chart').innerHTML='<p class="note">Chart appears once the data file has been generated (see setup steps).</p>'});
+})();
+</script>
+</body>
+</html>
