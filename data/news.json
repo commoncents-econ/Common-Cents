@@ -1,0 +1,47 @@
+{
+ "updated": "21 Nov 2026",
+ "items": [
+  {
+   "source": "RBA",
+   "title": "Statement on Monetary Policy, November 2026",
+   "link": "https://www.rba.gov.au/publications/smp/2026/nov/overview.html",
+   "date": "3 Nov 2026"
+  },
+  {
+   "source": "ABS",
+   "title": "Unemployment rate rises to 4.9%",
+   "link": "https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-rises-49",
+   "date": "19 Nov 2026"
+  },
+  {
+   "source": "ABS",
+   "title": "Highest quarterly wage growth since December quarter 2023",
+   "link": "https://www.abs.gov.au/media-centre/media-releases/highest-quarterly-wage-growth-december-quarter-2023",
+   "date": "18 Nov 2026"
+  },
+  {
+   "source": "BLS",
+   "title": "Consumer Price Index, United States",
+   "link": "https://www.bls.gov/cpi/",
+   "date": "10 Nov 2026"
+  },
+  {
+   "source": "ABS",
+   "title": "CPI rose 4.3% in the year to September 2026",
+   "link": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026",
+   "date": "28 Oct 2026"
+  },
+  {
+   "source": "US Federal Reserve",
+   "title": "FOMC statement, 28 October 2026",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "date": "28 Oct 2026"
+  },
+  {
+   "source": "ABS",
+   "title": "Australian economy grew 0.4% in the June quarter",
+   "link": "https://www.abs.gov.au/media-centre/media-releases/australian-economy-grew-04-june-quarter",
+   "date": "2 Sep 2026"
+  }
+ ]
+}
