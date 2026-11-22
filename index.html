@@ -854,6 +854,20 @@ footer b{font:400 34px/1 var(--ser)!important;color:#f4efe3!important;letter-spa
 .chg.next b{color:var(--gd)}.chg.next small{color:var(--gd)}
 @media(prefers-color-scheme:dark){.chg.up em{color:#ff9a62}}
 @media(max-width:1000px){.chg-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:0;padding-bottom:6px}.chg{flex:0 0 220px;scroll-snap-align:start}.chg-head{flex-direction:column;align-items:flex-start;gap:12px}}
+
+/* vision layout fix: heading on top, three columns across full width */
+section.vision .vision-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:56px!important;max-width:1100px}
+section.vision{padding:clamp(72px,9vw,128px) 0!important}
+section.vision .vision-grid>div:first-child{max-width:880px}
+section.vision h2:not(#x){font:600 12px/1 "Hanken Grotesk",sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--gd)!important;margin:0 0 28px!important}
+section.vision .vision-lead:not(#x){font-size:clamp(40px,5.6vw,80px)!important;line-height:1.04!important}
+section.vision .vision-text{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:0!important;columns:auto!important}
+section.vision .vision-text .vt p{font:300 17px/1.7 "Hanken Grotesk",sans-serif!important;max-width:none;word-break:normal;overflow-wrap:normal}
+section.vision .vision-text .vt h3:not(#x){font:700 11px/1.2 "Hanken Grotesk",sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase;white-space:nowrap;margin:0 0 14px!important;color:var(--tx)}
+@media(max-width:820px){section.vision .vision-text{grid-template-columns:1fr!important}}
+/* hub labels were being turned serif by the global h3 rule */
+.cc-hub .hub-col h3:not(#x){font:700 11px/1.2 "Hanken Grotesk",sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--hc)}
+.cc-hub .hub-col h3 i{font:italic 400 20px/1 "Instrument Serif",Georgia,serif!important;letter-spacing:0!important;text-transform:none}
 </style>
 <link href="https://commoncents-econ.github.io/Common-Cents/" rel="canonical"/><meta content="Common Cents | Financial Literacy Should Be Common Sense" property="og:title"/><meta content="Because financial literacy should be common sense. 71 free Australian lessons, money tools, worked examples and clear guidance for everyday financial decisions." property="og:description"/><meta content="website" property="og:type"/><meta content="https://commoncents-econ.github.io/Common-Cents/" property="og:url"/></head>
 <body>
